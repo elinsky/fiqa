@@ -64,4 +64,4 @@ class HeadlineTFIDFTokenizer(BaseEstimator, TransformerMixin):
         headlines_tf = tf.convert_to_tensor(headlines_tfidf, dtype=tf.float32)
         headlines_dataset = tf.data.Dataset.from_tensor_slices(headlines_tf, name='headlines_tfidf')
         transformed = tf.data.Dataset.zip((headlines_dataset, aspects, sentiments))
-        return X
+        return transformed
