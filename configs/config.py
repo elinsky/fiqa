@@ -7,7 +7,13 @@ CONFIG = {
         'n_level_2_corporate': 12,
         'n_level_2_economy': 2,
         'n_level_2_market': 4,
-        'n_level_2_stock': 9
+        'n_level_2_stock': 9,
+        'seed': 21,
+        'buffer_size': 1000,
+        'batch_size': 32,
+        'train_split': 0.80,
+        'validation_split': 0.10,
+        'test_split': 0.10
     },
     'train': {
         'batch_size': 32,

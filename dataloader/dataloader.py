@@ -35,6 +35,24 @@ class DataLoader:
         return dataset
 
     @staticmethod
+    def preprocess_data(dataset, data_config):
+        """Preprocess and split into training, validation, and test sets"""
+
+        # Shuffle and split
+        dataset = dataset.shuffle(data_config.buffer_size, data_config.seed)
+        train_dataset, rest = DataLoader._split_dataset(dataset, data_config.train_split)
+        validation_dataset, test_dataset = DataLoader._split_dataset(rest, data_config.validation_split / (
+                    1.0 - data_config.train_split))
+
+        # Preprocess training data
+        # TODO
+
+        # Preprocess validation and test data
+        # TODO
+
+        return train_dataset, validation_dataset, test_dataset
+
+    @staticmethod
     def _clean_aspect(aspect: str) -> Tuple[str, str]:
         """
         Given an aspect, return only the first two levels. Discard level 3+.
@@ -48,7 +66,13 @@ class DataLoader:
         return level_1, level_2
 
     @staticmethod
-    def _preprocess_data(dataset, batch_size, buffer_size):
-        """Preprocess and split into training, validation, and test sets"""
-        # TODO
-        pass
+    def _split_dataset(dataset: tf.data.Dataset, split_perc: float) -> Tuple[tf.data.Dataset, tf.data.Dataset]:
+        """
+        Splits a dataset into two. The first dataset returned has split_perc rows.
+        """
+        n = len(dataset)
+        n_first = int(n * split_perc)
+        first_dataset = dataset.take(n_first)
+        second_dataset = dataset.skip(n_first)
+
+        return first_dataset, second_dataset
