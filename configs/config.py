@@ -8,6 +8,7 @@ CONFIG = {
         'n_level_2_economy': 2,
         'n_level_2_market': 4,
         'n_level_2_stock': 9,
+        'vocab_size': 1000,
         'seed': 21,
         'buffer_size': 1000,
         'batch_size': 32,
@@ -28,6 +29,6 @@ CONFIG = {
         'epochs': 10
     },
     'model': {
-        'vocab_size': 3000
+        'vocab_size': 1000
     },
 }
