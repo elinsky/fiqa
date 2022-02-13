@@ -2,7 +2,7 @@
 
 CONFIG = {
     'data': {
-        'path': 'data',
+        'path': 'data/task1_headline_ABSA_train.json',
         'n_level_1_classes': 4,
         'n_level_2_corporate': 12,
         'n_level_2_economy': 2,
