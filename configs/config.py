@@ -13,7 +13,15 @@ CONFIG = {
         'batch_size': 32,
         'train_split': 0.80,
         'validation_split': 0.10,
-        'test_split': 0.10
+        'test_split': 0.10,
+        'aspect_labels': [['Corporate, Appointment'], ['Corporate, Company Communication'],
+                          ['Corporate, Dividend Policy'], ['Corporate, Financial'], ['Corporate, Legal'],
+                          ['Corporate, M&A'], ['Corporate, Regulatory'], ['Corporate, Reputation'],
+                          ['Corporate, Risks'], ['Corporate, Rumors'], ['Corporate, Sales'], ['Corporate, Strategy'],
+                          ['Economy, Central Banks'], ['Economy, Trade'], ['Market, Conditions'], ['Market, Currency'],
+                          ['Market, Market'], ['Market, Volatility'], ['Stock, Buyside'], ['Stock, Coverage'],
+                          ['Stock, Fundamentals'], ['Stock, Insider Activity'], ['Stock, IPO'], ['Stock, Options'],
+                          ['Stock, Price Action'], ['Stock, Signal'], ['Stock, Technical Analysis']]
     },
     'train': {
         'batch_size': 32,
@@ -21,5 +29,5 @@ CONFIG = {
     },
     'model': {
         'vocab_size': 3000
-    }
+    },
 }

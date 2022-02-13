@@ -2,6 +2,7 @@ import json
 from typing import Tuple
 
 import tensorflow as tf
+from sklearn.pipeline import Pipeline
 
 
 class DataLoader:
@@ -35,20 +36,22 @@ class DataLoader:
         return dataset
 
     @staticmethod
-    def preprocess_data(dataset, data_config):
+    def preprocess_data(dataset, data_config, pipeline: Pipeline):
         """Preprocess and split into training, validation, and test sets"""
 
         # Shuffle and split
         dataset = dataset.shuffle(data_config.buffer_size, data_config.seed)
         train_dataset, rest = DataLoader._split_dataset(dataset, data_config.train_split)
         validation_dataset, test_dataset = DataLoader._split_dataset(rest, data_config.validation_split / (
-                    1.0 - data_config.train_split))
+                1.0 - data_config.train_split))
 
         # Preprocess training data
-        # TODO
+        pipeline.fit(train_dataset)
+        train_dataset = pipeline.transform(train_dataset)
 
         # Preprocess validation and test data
-        # TODO
+        validation_dataset = pipeline.transform(validation_dataset)
+        test_dataset = pipeline.transform(test_dataset)
 
         return train_dataset, validation_dataset, test_dataset
 
