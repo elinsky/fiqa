@@ -1,4 +1,6 @@
+import numpy as np
 import tensorflow as tf
+from sklearn.metrics import classification_report, f1_score, mean_squared_error, r2_score
 from sklearn.pipeline import Pipeline
 from tensorflow.keras.layers import Dense
 
@@ -77,4 +79,30 @@ class NaiveBaseline(BaseModel):
 
     def evaluate(self):
         """Predicts results for the test set"""
-        pass
+        aspect_predictions = []
+        sentiment_predictions = []
+        aspect_labels = []
+        sentiment_labels = []
+
+        for headline, aspect_label, sentiment_label in self.val_dataset.batch(1):
+            # Make prediction
+            sentiment_pred, aspect_pred = self.model(headline)
+            # Get most probable class label
+            aspect_pred = np.argmax(aspect_pred)
+            # Get actual class label
+            aspect_label = np.argmax(aspect_label)
+
+            sentiment_predictions.append(float(sentiment_pred))
+            sentiment_labels.append(float(sentiment_label))
+            aspect_predictions.append(aspect_pred)
+            aspect_labels.append(aspect_label)
+
+        print(classification_report(aspect_labels, aspect_predictions))
+        print('aspect level 2 Macro F1 score:', f1_score(aspect_labels, aspect_predictions, average='macro'))
+
+        print('sentiment MSE:', mean_squared_error(sentiment_labels, sentiment_predictions))
+        print('sentiment R^2:', r2_score(sentiment_labels, sentiment_predictions))
+
+        # TODO calc F1 and error for aspect 1
+
+        return aspect_predictions, sentiment_predictions, aspect_labels, sentiment_labels
