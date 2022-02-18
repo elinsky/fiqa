@@ -1,6 +1,6 @@
 import numpy as np
 import tensorflow as tf
-from sklearn.metrics import classification_report, f1_score, mean_squared_error, r2_score
+from sklearn.metrics import classification_report, f1_score, mean_squared_error, r2_score, accuracy_score
 from sklearn.pipeline import Pipeline
 from tensorflow.keras.layers import Dense
 
@@ -101,7 +101,8 @@ class NaiveBaseline(BaseModel):
             aspect_labels.append(aspect_label)
 
         print(classification_report(aspect_labels, aspect_predictions))
-        print('aspect level 2 Macro F1 score:', f1_score(aspect_labels, aspect_predictions, average='macro'))
+        print('Aspect 2 Macro F1 Score:', f1_score(aspect_labels, aspect_predictions, average='macro'))
+        print('Aspect 2 Accuracy Score:', accuracy_score(aspect_labels, aspect_predictions))
 
         print('Sentiment MSE:', mean_squared_error(sentiment_labels, sentiment_predictions))
         print('Sentiment R^2:', r2_score(sentiment_labels, sentiment_predictions))
