@@ -1,892 +1,1101 @@
 {
-  "19167$GILD": {
-    "sentence": "$GILD Back in Bullish",
+    "14876": {
+    "sentence": "$IACI http://stks.co/tJU Looks good on the weekly chart.",
     "info": [
       {
-        "target": "GILD",
-        "snippets": "['Back in']"
+        "snippets": "['Looks good on the weekly chart.']",
+        "sentiment_score": "0.379",
+        "target": "IACI",
+        "aspects": "['Stock/Technical Analysis']"
       }
     ]
   },
-  "19168$LE": {
-    "sentence": "$LE Back in for a swing on this one @ 15.35/sh. Last time was +50% within 3 months",
+  "14877": {
+    "sentence": "$pcln back over \"up\" trendline from 10/4",
     "info": [
       {
-        "target": "LE",
-        "snippets": "['Back in for a swing']"
-      }
-    ]
-  },
-  "19169$WLL": {
-    "sentence": "$WLL In for a quarter position @ 8.10...",
-    "info": [
-      {
-        "target": "WLL",
-        "snippets": "['In for a quarter position']"
-      }
-    ]
-  },
-  "19170$VNR": {
-    "sentence": "$VNR Just added 2,300 @ .77 Going in for long term as this will hit $1.20 next month",
-    "info": [
-      {
-        "target": "VNR",
-        "snippets": "['Just added 2,300']"
-      }
-    ]
-  },
-  "19171$TSLA": {
-    "sentence": "Bought back into $TSLA, previously sold at $362",
-    "info": [
-      {
-        "target": "TSLA",
-        "snippets": "['Bought']"
-      }
-    ]
-  },
-  "19172$ZTO": {
-    "sentence": "$ZTO accumulating more at the $15s",
-    "info": [
-      {
-        "target": "ZTO",
-        "snippets": "['accumulating more']"
-      }
-    ]
-  },
-  "19173$TSLA": {
-    "sentence": "@TradeIdea might buy $TSLA after hours if I can get in on a dip after earnings",
-    "info": [
-      {
-        "target": "TSLA",
-        "snippets": "['might buy']"
-      }
-    ]
-  },
-  "19174$MSFT": {
-    "sentence": "$MSFT plenty of green, early sign of an upbeat day coming. Just buy back at open if u sold too soon.",
-    "info": [
-      {
-        "target": "MSFT",
-        "snippets": "['Just buy back at open']"
-      }
-    ]
-  },
-  "19175$BZUN": {
-    "sentence": "$BZUN good entry right now",
-    "info": [
-      {
-        "target": "BZUN",
-        "snippets": "['good entry right now']"
-      }
-    ]
-  },
-  "19176$MU": {
-    "sentence": "$MU 34.18, I ll buy 5 thousand shares and put it a side! I am calling the bottom, always bullish but in between sometimes bear.",
-    "info": [
-      {
-        "target": "MU",
-        "snippets": "['I ll buy 5 thousand shares']"
-      }
-    ]
-  },
-  "19177$UGAZ": {
-    "sentence": "$UGAZ Guess I'll buy another 1k shares",
-    "info": [
-      {
-        "target": "UGAZ",
-        "snippets": "[\"Guess I'll buy another 1k shares\"]"
-      }
-    ]
-  },
-  "19178$UWTI": {
-    "sentence": "$UWTI 25K shares left in U. Might sell all by Monday",
-    "info": [
-      {
-        "target": "UWTI",
-        "snippets": "['Might sell all by Monday']"
-      }
-    ]
-  },
-  "19179$MU ": {
-    "sentence": "$MU Im out... Sold at 13.84",
-    "info": [
-      {
-        "target": "MU ",
-        "snippets": "['Im out... Sold']"
-      }
-    ]
-  },
-  "19180$PLX": {
-    "sentence": "$PLX investors like me will sell off. i sold my 50k shares of plx until i know the plan",
-    "info": [
-      {
-        "target": "PLX",
-        "snippets": "['i sold my 50k shares']"
-      }
-    ]
-  },
-  "19181$DRYS": {
-    "sentence": "$DRYS I sold my position! 9% profit",
-    "info": [
-      {
-        "target": "DRYS",
-        "snippets": "['sold my position!']"
-      }
-    ]
-  },
-  "19182$PEIX": {
-    "sentence": "I sold my $PEIX shares today @ $6.07 but will buy them back lower.",
-    "info": [
-      {
-        "target": "PEIX",
-        "snippets": "['sold my $PEIX shares today']"
-      }
-    ]
-  },
-  "19183$AAPL": {
-    "sentence": "$AAPL Closed below 8ema. Sold position",
-    "info": [
-      {
-        "target": "AAPL",
-        "snippets": "['Sold position']"
-      }
-    ]
-  },
-  "19184$AZO": {
-    "sentence": "Sold remaining 1/3 $AZO at $700 - 30% above my $535 average",
-    "info": [
-      {
-        "target": "AZO",
-        "snippets": "['Sold remaining']"
-      }
-    ]
-  },
-  "19185$BABA": {
-    "sentence": "$BABA I added on the dip yesterday. Rick holding over night. But I’m running away from this.",
-    "info": [
-      {
-        "target": "BABA",
-        "snippets": "['But I’m running away from this.']"
-      }
-    ]
-  },
-  "19186$SPY": {
-    "sentence": "$SPY lost too much of hard earned money. Sold my 240 puts yesterday!!!! So, mad",
-    "info": [
-      {
-        "target": "SPY",
-        "snippets": "['Sold my 240 puts']"
-      }
-    ]
-  },
-  "19187$DRYS": {
-    "sentence": "$DRYS i exited very riskyyyy",
-    "info": [
-      {
-        "target": "DRYS",
-        "snippets": "['i exited']"
-      }
-    ]
-  },
-  "19188$SHOP": {
-    "sentence": "RSI is overbought on $SHOP and momentum is falling",
-    "info": [
-      {
-        "target": "SHOP",
-        "snippets": "['overbought on $SHOP and momentum is falling']"
-      }
-    ]
-  },
-  "19189$JNUG": {
-    "sentence": "$JNUG overbought, need to reset technicals",
-    "info": [
-      {
-        "target": "JNUG",
-        "snippets": "['overbought, need to reset technicals']"
-      }
-    ]
-  },
-  "19190$GV": {
-    "sentence": "$GV markets overbought ...feel the correction is close",
-    "info": [
-      {
-        "target": "GV",
-        "snippets": "['markets overbought ...feel the correction is close']"
-      }
-    ]
-  },
-  "19191$KATE": {
-    "sentence": "$KATE overbought, shooting star candle Friday, lots of bull ppl on this board. 3 extremely reliable indicators of impending doom next week",
-    "info": [
-      {
-        "target": "KATE",
-        "snippets": "['overbought, shooting star candle']"
-      }
-    ]
-  },
-  "19192$IO": {
-    "sentence": "$IO sell the pop, market extreme overbought here $SDRL $X $CHK",
-    "info": [
-      {
-        "target": "IO",
-        "snippets": "['market extreme overbought here']"
-      }
-    ]
-  },
-  "19193$DCTH": {
-    "sentence": "$DCTH is this seriously over bought.",
-    "info": [
-      {
-        "target": "DCTH",
-        "snippets": "['seriously over bought']"
-      }
-    ]
-  },
-  "19194$SQ": {
-    "sentence": "$SQ overbought by all the FOMO traders",
-    "info": [
-      {
-        "target": "SQ",
-        "snippets": "['overbought by all the FOMO traders']"
-      }
-    ]
-  },
-  "19195$AZO": {
-    "sentence": "$AZO does it look overbought yet at this level..",
-    "info": [
-      {
-        "target": "AZO",
-        "snippets": "['look overbought yet at this level..']"
-      }
-    ]
-  },
-  "19196$GMED": {
-    "sentence": "$GMED looks overbought at this level and time frame",
-    "info": [
-      {
-        "target": "GMED",
-        "snippets": "['looks overbought at this level']"
-      }
-    ]
-  },
-  "19197$NVDA": {
-    "sentence": "$NVDA what a bubble this stock is",
-    "info": [
-      {
-        "target": "NVDA",
-        "snippets": "['what a bubble this stock is']"
-      }
-    ]
-  },
-  "19198$CIE": {
-    "sentence": "$CIE stock is oversold and shorted to death. I don't really think it matters what ER says, the shorts will be out Monday",
-    "info": [
-      {
-        "target": "CIE",
-        "snippets": "['stock is oversold and shorted to death']"
-      }
-    ]
-  },
-  "19199$FTR": {
-    "sentence": "Bought $FTR on belief stock oversold. Dividend cut and bad news priced in.",
-    "info": [
-      {
-        "target": "FTR",
-        "snippets": "['Bought $FTR on belief stock oversold']"
-      }
-    ]
-  },
-  "19200$VIAV": {
-    "sentence": "$VIAV is in Stochastic Oversold winning 62.65% in the past",
-    "info": [
-      {
-        "target": "VIAV",
-        "snippets": "['Oversold winning 62.65% in the past']"
-      }
-    ]
-  },
-  "19201 $AGRX ": {
-    "sentence": "ONE STOCK OVERSOLD RSI 20 TO WATCH FOR POSSIBLE REVERSEAL $AGRX ",
-    "info": [
-      {
-        "target": "AGRX ",
-        "snippets": "['STOCKS OVERSOLD RSI 20']"
-      }
-    ]
-  },
-  "19202$RH": {
-    "sentence": "$RH Huge short interest. All of retail oversold. RSI below 20 today. Big squeeze coming. Likely back to upper 30s before earnings",
-    "info": [
-      {
-        "target": "RH",
-        "snippets": "['All of retail oversold']"
-      }
-    ]
-  },
-  "19203$SINO": {
-    "sentence": "These stocks are OVERSOLD & UNDERVALUED! So we need to buy @ support! $SINO $SCON $LTBR $ITEK $GALE $HGG $GBR $OPTT",
-    "info": [
-      {
-        "target": "SINO",
-        "snippets": "['These stocks are OVERSOLD & UNDERVALUED!']"
-      }
-    ]
-  },
-  "19204$KEM": {
-    "sentence": "$KEM looks like oversold already, unless there is other fundamentally bearish factor... good for first small entry.",
-    "info": [
-      {
-        "target": "KEM",
-        "snippets": "['looks like oversold already']"
-      }
-    ]
-  },
-  "19205$ENDP": {
-    "sentence": "Both RSI and Stochastic are in oversold territory on $ENDP",
-    "info": [
-      {
-        "target": "ENDP",
-        "snippets": "['in oversold territory']"
-      }
-    ]
-  },
-  "19206$FB": {
-    "sentence": "$FB $AMZN $AAPL $NFLX $GOOG $NVDA waaaay too hot!!! due for another tech sell off!!!",
-    "info": [
-      {
-        "target": "FB",
-        "snippets": "['waaaay too hot!!!  /  due for another tech sell off!!!']"
-      }
-    ]
-  },
-  "19207$WY": {
-    "sentence": "$WY overvalued....sorry folks but with merger costs/ housing slowdowns & less paper product demand then WY shares too high",
-    "info": [
-      {
-        "target": "WY",
-        "snippets": "['overvalued']"
-      }
-    ]
-  },
-  "19208$MTN": {
-    "sentence": "$MTN this stock is so overvalued its ridiculous, can we go back down to the 80s",
-    "info": [
-      {
-        "target": "MTN",
-        "snippets": "['this stock is so overvalued its ridiculous']"
-      }
-    ]
-  },
-  "19209$PCLN": {
-    "sentence": "$PCLN overvalued by 51.76%, mediocre fundamentals, not a strong buy",
-    "info": [
-      {
+        "snippets": "['back over \"up\" trendline']",
+        "sentiment_score": "0.308",
         "target": "PCLN",
-        "snippets": "['overvalued by 51.76%, mediocre fundamentals']"
+        "aspects": "['Stock/Price Action/Bullish']"
       }
     ]
   },
-  "19210$DPZ": {
-    "sentence": "$DPZ Domino's is an overvalued and leveraged company in a high-flying sector of a market near all-time highs..",
+  "14899": {
+    "sentence": "$YMI http://stks.co/Xyf Long setup. Closed above the 20MA. MACD cross. November catalyst.",
     "info": [
       {
-        "target": "DPZ",
-        "snippets": "['overvalued and leveraged company']"
+        "snippets": "['Long setup. Closed above the 20MA. MACD cross. November catalyst.']",
+        "sentiment_score": "0.444",
+        "target": "YMI",
+        "aspects": "['Stock/Price Action/Bullish']"
       }
     ]
   },
-  "19211$RIG": {
-    "sentence": "$RIG $AMZN $NFLX $TSLA lol, Amazon and Tesla are overvalued...",
+  "14902": {
+    "sentence": "$TZOO a close above 28.64 and we are ready to rock and roll",
     "info": [
       {
-        "target": "RIG",
-        "snippets": "['are overvalued...']"
+        "snippets": "['a close above 28.64 and we are ready to rock and roll']",
+        "sentiment_score": "0.308",
+        "target": "TZOO",
+        "aspects": "['Stock/Price Action/Bullish']"
       }
     ]
   },
-  "19212$NFX": {
-    "sentence": "$NFX still looks overpriced (rated 1.7 as price is down to 34.97).",
+  "14925": {
+    "sentence": "$SPY bull move ended waiting for next setup",
     "info": [
       {
-        "target": "NFX",
-        "snippets": "['still looks overpriced']"
+        "snippets": "['bull move ended']",
+        "sentiment_score": "-0.204",
+        "target": "SPY",
+        "aspects": "['Stock/Price Action/Bearish']"
       }
     ]
   },
-  "19213$AAPL": {
-    "sentence": "$AAPL Selling pressure aided by put buyers trying to exploit S-T opp. Same thing creates bullish pressure on call",
+  "14927": {
+    "sentence": "Double bottom with handle buy point of 29.51 $IP http://chart.ly/akvujxh",
     "info": [
       {
-        "target": "AAPL",
-        "snippets": "['Selling pressure']"
+        "snippets": "['Double bottom with handle buy point']",
+        "sentiment_score": "0.446",
+        "target": "IP",
+        "aspects": "['Stock/Technical Analysis']"
       }
     ]
   },
-  "19214$AAPL": {
-    "sentence": "$AAPL under more selling pressure today - down 2.5%",
+  "14945": {
+    "sentence": "$DUG weekly stochastics finally starting to turn up after long consolidation. Buying here.",
     "info": [
       {
-        "target": "AAPL",
-        "snippets": "['under more selling pressure today']"
+        "snippets": "['weekly stochastics finally starting to turn up']",
+        "sentiment_score": "0.702",
+        "target": "DUG",
+        "aspects": "['Stock/Technical Analysis/Stochastic']"
       }
     ]
   },
-  "19215$AAPL": {
-    "sentence": "$AAPL gravestone doji indicating downward selling pressure. After long upward trajectory,healthy to retest 108/106 ",
+  "14955": {
+    "sentence": "$SPY Don't hang your bull hat yet. Next week we will pop higher on QE3 hope on back of fed's 2 day meeting.",
     "info": [
       {
-        "target": "AAPL",
-        "snippets": "['indicating downward selling pressure']"
+        "snippets": "['Next week we will pop higher']",
+        "sentiment_score": "0.412",
+        "target": "SPY",
+        "aspects": "['Stock/Price Action/Bullish']"
       }
     ]
   },
-  "19216$TVIX": {
-    "sentence": "$TVIX in @$10.07 please stop selling people. Get a hold of reality and let's get this back to $12 ish. Buy buy buy buy buy buy and MORE BUY!",
+  "15003": {
+    "sentence": "Nasdaq Sets Up for Breakout Part II | via @AllStarCharts http://stks.co/15Nv  $GOOG $AMZN $QCOM",
     "info": [
       {
-        "target": "TVIX",
-        "snippets": "['please stop selling people']"
+        "snippets": "['Sets Up for Breakout']",
+        "sentiment_score": "0.396",
+        "target": "QCOM",
+        "aspects": "['Stock/Price Action/Bullish']"
       }
     ]
   },
-  "19217$XNET": {
-    "sentence": "$XNET don't catch this falling Knife taders. protect yourselves.",
+  "15009": {
+    "sentence": "$isrg trading at all-time high after strong earnings report with 4 days of short interest.",
     "info": [
       {
-        "target": "XNET",
-        "snippets": "[\"don't catch this falling Knife\"]"
+        "snippets": "['trading at all-time high']",
+        "sentiment_score": "0.729",
+        "target": "ISRG",
+        "aspects": "['Stock/Price Action/Current Price/52-Week High']"
       }
     ]
   },
-  "19218$CYTX": {
-    "sentence": "$CYTX 3 day trading is oversold at 28.44 RSI stock price reversal will happen ",
+  "15047": {
+    "sentence": "FBR Capital reiterated \"Outperform\" rating on $BRCM with a price target of $45.00 on Friday.",
     "info": [
       {
-        "target": "CYTX",
-        "snippets": "['3 day trading is oversold']"
+        "snippets": "['reiterated \"Outperform\" rating']",
+        "sentiment_score": "0.521",
+        "target": "BRCM",
+        "aspects": "['Stock/Coverage/AnalystRatings/Upgrade']"
       }
     ]
   },
-  "19219$SBGL": {
-    "sentence": "$SBGL The most undervalued gold/platinum stock in the world! Target 60",
+  "15050": {
+    "sentence": "$ELN longs...congrats...another HOD",
     "info": [
       {
-        "target": "SBGL",
-        "snippets": "['The most undervalued']"
+        "snippets": "['longs...congrats...another HOD']",
+        "sentiment_score": "0.445",
+        "target": "ELN",
+        "aspects": "['Stock/Price Action/Bullish/Bullish Behavior']"
       }
     ]
   },
-  "19220$ARNC": {
-    "sentence": "$ARNC Stock is significantly undervalued. The Fastener business alone is worth more than the current stock price and it's a cash cow",
+  "15080": {
+    "sentence": "i-Grid shows $DIA capped for the long term at range of 123.40- 124.77;any rally beyond today's levels or into this range leads to meltdown.",
     "info": [
       {
-        "target": "ARNC",
-        "snippets": "['Stock is significantly undervalued']"
+        "snippets": "[\"any rally beyond today's levels or into this range leads to meltdown.\"]",
+        "sentiment_score": "-0.172",
+        "target": "DIA",
+        "aspects": "['Stock/Price Action/Bearish']"
       }
     ]
   },
-  "19221$CXW": {
-    "sentence": "$CXW is currently way undervalued and will rise back to the $19's soon",
+  "15088": {
+    "sentence": "Whats up with $LULU?  Numbers looked good, not great, but good.  I think conference call will instill confidence.",
     "info": [
       {
-        "target": "CXW",
-        "snippets": "['is currently way undervalued and will rise back to']"
+        "snippets": "['Numbers looked good, not great, but good']",
+        "sentiment_score": "0.011",
+        "target": "LULU",
+        "aspects": "['Stock/Fundamentals']"
       }
     ]
   },
-  "19222$AMZN": {
-    "sentence": "Macquarie Reiterates “Buy” Rating for http://Amazon.com , Inc. $AMZN",
+  "15122": {
+    "sentence": "My $DWA play up 6% today. I'm still skeptical. Will take profits. Not a time cheer",
     "info": [
       {
-        "target": "AMZN",
-        "snippets": "['Reiterates “Buy” Rating']"
+        "snippets": "[\"I'm still skeptical. Will take profits\"]",
+        "sentiment_score": "-0.088",
+        "target": "DWA",
+        "aspects": "['Stock/Price Action/Bearish']"
       }
     ]
   },
-  "19223$AMZN": {
-    "sentence": "Cantor Fitzgerald Sticks to Its Buy Rating for Amazon $AMZN",
+  "15132": {
+    "sentence": "$IBM staying strong",
     "info": [
       {
-        "target": "AMZN",
-        "snippets": "['Sticks to Its Buy Rating for']"
-      }
-    ]
-  },
-  "19224$A": {
-    "sentence": "Analyst Activity – Barclays PLC Reiterates Buy on Agilent Technologies (NYSE:A) https://t.co/SJSMP8qzxs $A",
-    "info": [
-      {
-        "target": "A",
-        "snippets": "['Reiterates Buy']"
-      }
-    ]
-  },
-  "19225$AMC": {
-    "sentence": "$AMC 87% of analysts have a buy rating on $AMC with 20% upside",
-    "info": [
-      {
-        "target": "AMC",
-        "snippets": "['analysts have a buy rating on']"
-      }
-    ]
-  },
-  "19226$MGM": {
-    "sentence": "5-star analyst Robin M. Farley from UBS reiterated a BUY on $MGM",
-    "info": [
-      {
-        "target": "MGM",
-        "snippets": "['reiterated a BUY']"
-      }
-    ]
-  },
-  "19227$CHKP": {
-    "sentence": "Check Point Software Technologies Ltd. $CHKP Receives Outperform Rating from Oppenheimer Holdings, Inc.",
-    "info": [
-      {
-        "target": "CHKP",
-        "snippets": "['Receives Outperform Rating']"
-      }
-    ]
-  },
-  "19228$SWI": {
-    "sentence": "$SWI downgraded to market perform from outperform at FBR & Co.",
-    "info": [
-      {
-        "target": "SWI",
-        "snippets": "['downgraded to market perform']"
-      }
-    ]
-  },
-  "19229$DH": {
-    "sentence": "$DH.CA NA BK analyst dropped rating to under perform with target price to $18 + high likelihood of dividend cut",
-    "info": [
-      {
-        "target": "DH",
-        "snippets": "['dropped rating to under perform']"
-      }
-    ]
-  },
-  "19230$SPG": {
-    "sentence": "$SPG downgraded to Neutral from Buy at Goldman. PT to $185 from $207",
-    "info": [
-      {
-        "target": "SPG",
-        "snippets": "['downgraded to Neutral']"
-      }
-    ]
-  },
-  "19231$AMZN": {
-    "sentence": "Amazon.com , Inc. $AMZN Downgraded by Zacks Investment Research to “Strong Sell”",
-    "info": [
-      {
-        "target": "AMZN",
-        "snippets": "['Downgraded']"
-      }
-    ]
-  },
-  "19232$TWTR": {
-    "sentence": "Twitter, Inc. $TWTR Rating Lowered to Sell at BidaskClub",
-    "info": [
-      {
-        "target": "TWTR",
-        "snippets": "['Rating Lowered']"
-      }
-    ]
-  },
-  "19233$GE": {
-    "sentence": "$GE gets a raise",
-    "info": [
-      {
-        "target": "GE",
-        "snippets": "['gets a raise']"
-      }
-    ]
-  },
-  "19234$AMZN": {
-    "sentence": "Amazon.com  Inc  $AMZN  just had an analyst rating upgrade...",
-    "info": [
-      {
-        "target": "AMZN",
-        "snippets": "['just had an analyst rating upgrade']"
-      }
-    ]
-  },
-  "19235$FANG": {
-    "sentence": "#Google Parent And $FANG Stock Alphabet Gets Rating Upgrade - Investor's Business Daily",
-    "info": [
-      {
-        "target": "FANG",
-        "snippets": "['Gets Rating Upgrade']"
-      }
-    ]
-  },
-  "19236$TSO": {
-    "sentence": "$TSO Tesoro Achieves Investment Grade Credit Rating with Standard & Poor's Upgrade",
-    "info": [
-      {
-        "target": "TSO",
-        "snippets": "['Achieves Investment Grade Credit Ratin']"
-      }
-    ]
-  },
-  "19237$ITC": {
-    "sentence": "CLSA On ITC: Rating: Upgrade To Underperform From Sell, Taget: Rs 285",
-    "info": [
-      {
-        "target": "ITC",
-        "snippets": "['Rating: Upgrade To']"
-      }
-    ]
-  },
-  "19238$FB": {
-    "sentence": "$FB Buy rating by MKM Partners with a $105 PT",
-    "info": [
-      {
-        "target": "FB",
-        "snippets": "['Buy rating']"
-      }
-    ]
-  },
-  "19239$CLI": {
-    "sentence": "Barclays reiterated Mack-Cali Realty $CLI at Sell. Maybe wanna stay away Value investors",
-    "info": [
-      {
-        "target": "CLI",
-        "snippets": "['Barclays reiterated Mack-Cali Realty $CLI at Sell']"
-      }
-    ]
-  },
-  "19240$UAA": {
-    "sentence": "Under Armour downgraded to Sell from Hold at Deutsche Bank - $UAA",
-    "info": [
-      {
-        "target": "UAA",
-        "snippets": "['downgraded to Sell']"
-      }
-    ]
-  },
-  "19241$AMD": {
-    "sentence": "$AMD GS reiterated Sell rating, so that isn't helping",
-    "info": [
-      {
-        "target": "AMD",
-        "snippets": "['reiterated Sell rating']"
-      }
-    ]
-  },
-  "19242$AMD": {
-    "sentence": "$AMD Citigroup Inc. issued a sell rating and a $2.00 price objective on the stock",
-    "info": [
-      {
-        "target": "AMD",
-        "snippets": "['issued a sell rating']"
-      }
-    ]
-  },
-  "19243$GE": {
-    "sentence": "$GE notice how insiders have only been buying the last 3 months - not selling",
-    "info": [
-      {
-        "target": "GE",
-        "snippets": "['insiders have only been buying']"
-      }
-    ]
-  },
-  "19244$COTY": {
-    "sentence": "$COTY Recent significant insider buying at $COTY, $REV, and $IFF. ",
-    "info": [
-      {
-        "target": "COTY",
-        "snippets": "['significant insider buying']"
-      }
-    ]
-  },
-  "19245$PLXP": {
-    "sentence": "$PLXP I like the insider buying taking place",
-    "info": [
-      {
-        "target": "PLXP",
-        "snippets": "['insider buying taking place']"
-      }
-    ]
-  },
-  "19246$TOL": {
-    "sentence": "$TOL takes a hit on its earnings miss today.",
-    "info": [
-      {
-        "target": "TOL",
-        "snippets": "['earnings miss today']"
-      }
-    ]
-  },
-  "19247$XTNT ": {
-    "sentence": "$XTNT 10% increase in revenue yoy, 24.5 million in revenue and 25 million is the breakeven point with total cost of operating(debt included)",
-    "info": [
-      {
-        "target": "XTNT ",
-        "snippets": "['increase in revenue yoy']"
-      }
-    ]
-  },
-  "19248$PTLA": {
-    "sentence": "$PTLA why are the insider selling?",
-    "info": [
-      {
-        "target": "PTLA",
-        "snippets": "['why are the insider selling?']"
-      }
-    ]
-  },
-  "19249$KO": {
-    "sentence": "Coca-Cola shares rise after earnings beat expectations",
-    "info": [
-      {
-        "target": "KO",
-        "snippets": "['earnings beat expectations']"
-      }
-    ]
-  },
-  "19250$FORD": {
-    "sentence": "MarketWatch: Ford offers positive 2017 guidance after Q2 earnings beat, but shares wobble",
-    "info": [
-      {
-        "target": "FORD",
-        "snippets": "['Q2 earnings beat']"
-      }
-    ]
-  },
-  "19251$ST": {
-    "sentence": "Sensata Technologies Holding N.V. $ST Shares Gap Up Following Earnings Beat",
-    "info": [
-      {
-        "target": "ST",
-        "snippets": "['Up Following Earnings Beat']"
-      }
-    ]
-  },
-  "19252$BBBY": {
-    "sentence": "$BBBY After earnings it's tanking",
-    "info": [
-      {
-        "target": "BBBY",
-        "snippets": "[\"After earnings it's tanking\"]"
-      }
-    ]
-  },
-  "19253$SPPI": {
-    "sentence": "$SPPI drops sharply after bad earnings. Investors not liking what they see. Say hello to $5's",
-    "info": [
-      {
-        "target": "SPPI",
-        "snippets": "['bad earnings']"
-      }
-    ]
-  },
-  "19254$HIMX": {
-    "sentence": "$HIMX great short entry, earnings miss + bad guide + downgrade next week = more downside",
-    "info": [
-      {
-        "target": "HIMX",
-        "snippets": "['earnings miss']"
-      }
-    ]
-  },
-  "19255$MONY": {
-    "sentence": "Price-comparison site http://Moneysupermarket.com  slumps the most in 4 years after profit warning https://bloom.bg/2tK2o0y",
-    "info": [
-      {
-        "target": "MONY",
-        "snippets": "['profit warning']"
-      }
-    ]
-  },
-  "19256$GTOFF": {
-    "sentence": "Gemalto shares slump on third profit warning https://www.ft.com/content/1ee22294-7071-11e7-aca6-c6bd07df1a3c … via @FT",
-    "info": [
-      {
-        "target": "GTOFF",
-        "snippets": "['profit warning']"
-      }
-    ]
-  },
-  "19257$HIBB": {
-    "sentence": "Hibbett Sports shares plummet 30% after profit warning, ‘woefully late’ e-commerce launch",
-    "info": [
-      {
-        "target": "HIBB",
-        "snippets": "['profit warning']"
-      }
-    ]
-  },
-  "19258$ITV": {
-    "sentence": "Brexit drives down profits and advertising revenue at ITV ",
-    "info": [
-      {
-        "target": "ITV",
-        "snippets": "['drives down profits and advertising revenue']"
-      }
-    ]
-  },
-  "19259$GM": {
-    "sentence": "GM Q2 Revenue $37BN, down 1.1% Y/Y, Exp. $40.15BN EPS $1.89, Exp. $1.70",
-    "info": [
-      {
-        "target": "GM",
-        "snippets": "['Revenue $37BN, down']"
-      }
-    ]
-  },
-  "19260$CTG": {
-    "sentence": "CTG revenue falls 9%, lowers full-year revenue guidance",
-    "info": [
-      {
-        "target": "CTG",
-        "snippets": "['revenue falls']"
-      }
-    ]
-  },
-  "19261$IBM": {
-    "sentence": "IBM revenue growth down 3% over the past year, its 20th consecutive YoY decline. $IBM",
-    "info": [
-      {
+        "snippets": "['staying strong']",
+        "sentiment_score": "0.532",
         "target": "IBM",
-        "snippets": "['revenue growth dow']"
+        "aspects": "['Stock/Price Action/Bullish']"
       }
     ]
   },
-  "19262$CAT": {
-    "sentence": "Caterpillar has big revenue & sales increases in Asia-Pacific. Sales are marginally up domestically",
+  "15167": {
+    "sentence": "$RDC Rowan Expands Share Repurchase Program to $150 million",
     "info": [
       {
-        "target": "CAT",
-        "snippets": "['big revenue & sales increases']"
+        "snippets": "['Rowan Expands Share Repurchase Program']",
+        "sentiment_score": "0.285",
+        "target": "RDC",
+        "aspects": "['Stock/Fundamentals/Share Buyback']"
       }
     ]
   },
-  "19263$GOOG": {
-    "sentence": "Alphabet revenue up 21 percent to $26B",
+  "15175": {
+    "sentence": "$NVDA sideways",
     "info": [
       {
+        "snippets": "['sideways']",
+        "sentiment_score": "0.0",
+        "target": "NVDA",
+        "aspects": "['Stock/Price Action']"
+      }
+    ]
+  },
+  "15201": {
+    "sentence": "$SPY extreme win today - 2 cents above 2009  low on 10-year and $SPY up 2 percent - life is a bowl of cherries - great short setting up $$",
+    "info": [
+      {
+        "snippets": "['great short setting up']",
+        "sentiment_score": "-0.406",
+        "target": "SPY",
+        "aspects": "['Stock/Price Action']"
+      }
+    ]
+  },
+  "15209": {
+    "sentence": "$LNT Increases Annual Dividend Target to $1.80/Share from $1.70/Share",
+    "info": [
+      {
+        "snippets": "['Increases Annual Dividend Target']",
+        "sentiment_score": "0.324",
+        "target": "LNT",
+        "aspects": "['Corporate/Dividend Policy']"
+      }
+    ]
+  },
+  "15249": {
+    "sentence": "$AAPL I'm sure those short are holding their breath hoping for a miracle. lol",
+    "info": [
+      {
+        "snippets": "[\"I'm sure those short are holding their breath\"]",
+        "sentiment_score": "0.411",
+        "target": "AAPL",
+        "aspects": "['Stock/Price Action/Volatility/Short Selling']"
+      }
+    ]
+  },
+  "15250": {
+    "sentence": "VIVUS $VVUS bear raid in effect. Stock down 12%",
+    "info": [
+      {
+        "snippets": "['bear raid in effect. Stock down 12%']",
+        "sentiment_score": "-0.57",
+        "target": "VVUS",
+        "aspects": "['Stock/Price Action/Volatility/Short Selling']"
+      }
+    ]
+  },
+  "15274": {
+    "sentence": "$ZNGA http://stks.co/3rdu Looking for a test at 9.25 resistance point. cc @ cfrazierjr @FletchTrade #traders",
+    "info": [
+      {
+        "snippets": "['Looking for a test at 9.25 resistance point']",
+        "sentiment_score": "0.248",
+        "target": "ZNGA",
+        "aspects": "['Stock/Technical Analysis']"
+      }
+    ]
+  },
+  "15276": {
+    "sentence": "$EFUT hod  posted buy pm at $4.40",
+    "info": [
+      {
+        "snippets": "['hod poste']",
+        "sentiment_score": "0.354",
+        "target": "EFUT",
+        "aspects": "['Stock/Price Action/Bullish/Bullish Behavior']"
+      }
+    ]
+  },
+  "15360": {
+    "sentence": "$WYNN big bounce",
+    "info": [
+      {
+        "snippets": "['big bounce']",
+        "sentiment_score": "0.61",
+        "target": "WYNN",
+        "aspects": "['Stock/Price Action/Bullish']"
+      }
+    ]
+  },
+  "15362": {
+    "sentence": "$GLD http://stks.co/44ow On closer inspection.  Resistance 10 points north at 200d and downward trendline. Chart 2 of 2.",
+    "info": [
+      {
+        "snippets": "['Resistance 10 points north at 200d and downward trendline']",
+        "sentiment_score": "-0.143",
+        "target": "GLD",
+        "aspects": "['Stock/Technical Analysis']"
+      }
+    ]
+  },
+  "15437": {
+    "sentence": "It's a bad idea to make 5 min predictions based on faith: RT @dandyduct $AAPL Sell signal hit at 584, it will go down for the next 5 min",
+    "info": [
+      {
+        "snippets": "['Sell signal hit at 584, it will go down for the next 5 min']",
+        "sentiment_score": "-0.445",
+        "target": "AAPL",
+        "aspects": "['Stock/Signal/Sell Signal']"
+      }
+    ]
+  },
+  "15439": {
+    "sentence": "$KCG bot at 2.24",
+    "info": [
+      {
+        "snippets": "['bot at 2.24']",
+        "sentiment_score": "0.384",
+        "target": "KCG",
+        "aspects": "['Stock/Price Action/Bullish/Bull Position']"
+      }
+    ]
+  },
+  "15482": {
+    "sentence": "Went long on this $COG, will see 70's again me thinks",
+    "info": [
+      {
+        "snippets": "['Went long on this']",
+        "sentiment_score": "0.574",
+        "target": "COG",
+        "aspects": "['Stock/Price Action/Bullish/Bull Position']"
+      }
+    ]
+  },
+  "15505": {
+    "sentence": "$AAPL nibbling on a small long via 525.. buying off 13min charts..",
+    "info": [
+      {
+        "snippets": "['nibbling on a small long']",
+        "sentiment_score": "0.509",
+        "target": "AAPL",
+        "aspects": "['Stock/Price Action/Bullish']"
+      }
+    ]
+  },
+  "15531": {
+    "sentence": "$LEE http://stks.co/24kM LEE ready to exit bankruptcy. Strong volume today.",
+    "info": [
+      {
+        "snippets": "['ready to exit bankruptcy']",
+        "sentiment_score": "0.298",
+        "target": "LEE",
+        "aspects": "['Corporate/Financial/Bankruptcy/Exisiting bankruptcy']"
+      }
+    ]
+  },
+  "15533": {
+    "sentence": "$RCON some upside today. This thing is severe low float. If there is catalyst for this guy. It can run.",
+    "info": [
+      {
+        "snippets": "['some upside today']",
+        "sentiment_score": "0.254",
+        "target": "RCON",
+        "aspects": "['Stock/Price Action/Bullish']"
+      }
+    ]
+  },
+  "15567": {
+    "sentence": "$HLF shorts made a killing last couple days, might make more if cover and buy back?",
+    "info": [
+      {
+        "snippets": "['shorts made a killing last couple days']",
+        "sentiment_score": "-0.334",
+        "target": "HLF",
+        "aspects": "['Stock/Price Action/Volatility/Short Selling']"
+      }
+    ]
+  },
+  "15576": {
+    "sentence": "Multi Top on $MCD chart finally leads to a fall in price.  Stability is questioned in the stock but coming weeks will tell.",
+    "info": [
+      {
+        "snippets": "['chart finally leads to a fall in price']",
+        "sentiment_score": "-0.474",
+        "target": "MCD",
+        "aspects": "['Stock/Technical Analysis']"
+      }
+    ]
+  },
+  "15588": {
+    "sentence": "$DMND green and moving",
+    "info": [
+      {
+        "snippets": "['green and moving']",
+        "sentiment_score": "0.477",
+        "target": "DMND",
+        "aspects": "['Stock/Price Action/Bullish']"
+      }
+    ]
+  },
+  "15596": {
+    "sentence": "$MTD (Mettler-Toledo) ready for a breakout",
+    "info": [
+      {
+        "snippets": "['ready for a breakout']",
+        "sentiment_score": "0.428",
+        "target": "MTD",
+        "aspects": "['Stock/Technical Analysis/Breakout']"
+      }
+    ]
+  },
+  "15630": {
+    "sentence": "$AMD big dumping... would not touch it for a while",
+    "info": [
+      {
+        "snippets": "['big dumping... would not touch it for a while']",
+        "sentiment_score": "-0.699",
+        "target": "AMD",
+        "aspects": "['Stock/Price Action/Bearish/Bearish Behavior']"
+      }
+    ]
+  },
+  "15633": {
+    "sentence": "$GNRC finding support at its 10-day line so far.",
+    "info": [
+      {
+        "snippets": "['finding support at its 10-day line so far.']",
+        "sentiment_score": "0.256",
+        "target": "GNRC",
+        "aspects": "['Stock/Price Action/Bullish/Bullish Behavior']"
+      }
+    ]
+  },
+  "15650": {
+    "sentence": "Google, Inc. completes acquisition of ICOA, Inc. http://stks.co/nFEI $ICOA $GOOG",
+    "info": [
+      {
+        "snippets": "['completes acquisition of']",
+        "sentiment_score": "0.451",
+        "target": "ICOA",
+        "aspects": "['Corporate/M&A/M&A']"
+      }
+    ]
+  },
+  "15676": {
+    "sentence": "Amazon declares 'best ever' Black Friday and Cyber Monday for Kindle family http://stks.co/cEtw via Engadget $AMZN",
+    "info": [
+      {
+        "snippets": "[\"declares 'best ever' Black Friday and Cyber Monday\"]",
+        "sentiment_score": "0.434",
+        "target": "AMZN",
+        "aspects": "['Corporate/Sales']"
+      }
+    ]
+  },
+  "15716": {
+    "sentence": "$SAVE breaking it's downtrend line on increasing volume. A move above 20.57 could see more upside. http://stks.co/l8y4",
+    "info": [
+      {
+        "snippets": "['could see more upside']",
+        "sentiment_score": "0.546",
+        "target": "SAVE",
+        "aspects": "['Stock/Price Action/Bullish']"
+      }
+    ]
+  },
+  "15719": {
+    "sentence": "$GOOG resistance turned support?  It",
+    "info": [
+      {
+        "snippets": "['resistance turned support?']",
+        "sentiment_score": "0.34",
         "target": "GOOG",
-        "snippets": "['revenue up 21 percent']"
+        "aspects": "['Stock/Technical Analysis']"
       }
     ]
   },
-  "19264$PEP": {
-    "sentence": "$PEP Q2'17 delivered 6% organic revenue D&E growth & 3% reported net revenue D&E ... $PEP Q2 organic revenue up 3.1%; reported net revenue up 2.0%",
+  "15824": {
+    "sentence": "$GS is looking weak while this market is moving higher not a good sign. Unless $gs can get above 157. early short below 154.00 today.",
     "info": [
       {
-        "target": "PEP",
-        "snippets": "['reported net revenue up 2.0%']"
+        "snippets": "['is looking weak while this market is moving higher not a good sign']",
+        "sentiment_score": "-0.398",
+        "target": "GS",
+        "aspects": "['Stock/Price Action/Bearish/Bearish Behavior']"
       }
     ]
   },
-  "19265$SHOP": {
-    "sentence": "$SHOP Shopify revenue up 86% year-over-year (long) ",
+  "15826": {
+    "sentence": "Key level to watch in $FB for today is 25.53-- watching to see if it can hold as support http://stks.co/bOH4",
     "info": [
       {
-        "target": "SHOP",
-        "snippets": "['revenue up 86% year-over-year']"
+        "snippets": "['Key level to watch']",
+        "sentiment_score": "-0.042",
+        "target": "FB",
+        "aspects": "['Stock/Technical Analysis']"
+      }
+    ]
+  },
+  "15881": {
+    "sentence": "$amrn Full bull call spread ranging July to Jan 15. Lets see what this baby does,",
+    "info": [
+      {
+        "snippets": "['Full bull call spread ranging July to Jan']",
+        "sentiment_score": "0.681",
+        "target": "AMRN",
+        "aspects": "['Stock/Options/Strategies/Bull Call Spread']"
+      }
+    ]
+  },
+  "15888": {
+    "sentence": "$FB Dax says bye bye 2013 - finished a great yr w 28% plus!",
+    "info": [
+      {
+        "snippets": "['finished a great yr w 28% plus!']",
+        "sentiment_score": "0.319",
+        "target": "FB",
+        "aspects": "['Stock/Price Action/Bullish/Bullish Behavior']"
+      }
+    ]
+  },
+  "15957": {
+    "sentence": "$ocn has the stuff. Will be looking to add shares if we get a new high breakout.",
+    "info": [
+      {
+        "snippets": "['Will be looking to add shares if we get a new high breakout.']",
+        "sentiment_score": "0.421",
+        "target": "OCN",
+        "aspects": "['Stock/Price Action/Bullish/Bull Position']"
+      }
+    ]
+  },
+  "15962": {
+    "sentence": "$BBRY hearing rumours of a major joint venture announcement.",
+    "info": [
+      {
+        "snippets": "['hearing rumours of a major joint venture announcement']",
+        "sentiment_score": "0.427",
+        "target": "BBRY",
+        "aspects": "['Corporate/Rumors']"
+      }
+    ]
+  },
+  "16048": {
+    "sentence": "$LULU #Outlook #Q1 2013 #lost revenue in the range of $12 million to $17 million -not good",
+    "info": [
+      {
+        "snippets": "['#lost revenue in the range of $12 million to $17 million -not good']",
+        "sentiment_score": "-0.43",
+        "target": "LULU",
+        "aspects": "['Corporate/Sales']"
+      }
+    ]
+  },
+  "16054": {
+    "sentence": "@Dojiknows th SP and the potential of QNX BES10 and BBM  cross platform will bring good news in time $bbry",
+    "info": [
+      {
+        "snippets": "['the potential of QNX BES10 and BBM  cross platform']",
+        "sentiment_score": "0.284",
+        "target": "BBRY",
+        "aspects": "['Corporate/Strategy/New Product']"
+      }
+    ]
+  },
+  "16164": {
+    "sentence": "$FB SHIFTING ON THE 15 MINUTE HERE - SUSPECT TO TAKE HIGHS",
+    "info": [
+      {
+        "snippets": "['SUSPECT TO TAKE HIGHS']",
+        "sentiment_score": "0.442",
+        "target": "FB",
+        "aspects": "['Stock/Price Action/Bullish/Bullish Behavior']"
+      }
+    ]
+  },
+  "16166": {
+    "sentence": "$AMRN You can many times find top and bottoms when shorts start rejoicing or bulls start rejoicing. Currently it is the shorts rejoicing",
+    "info": [
+      {
+        "snippets": "['Currently it is the shorts rejoicing']",
+        "sentiment_score": "-0.54",
+        "target": "AMRN",
+        "aspects": "['Stock/Price Action']"
+      }
+    ]
+  },
+  "16228": {
+    "sentence": "$SLV POS, been saying it for 2 years. Going lower. Forget about it or go short.",
+    "info": [
+      {
+        "snippets": "['Going lower. Forget about it or go short.']",
+        "sentiment_score": "-0.631",
+        "target": "SLV",
+        "aspects": "['Stock/Price Action/Bearish/Bearish Behavior']"
+      }
+    ]
+  },
+  "16238": {
+    "sentence": "New recommendation from Carl Kirst of BMO Capital Markets for $WMB is BUY.Price target is $62:http://stks.co/t0S0r",
+    "info": [
+      {
+        "snippets": "['New recommendation from Carl Kirst of BMO Capital Markets for']",
+        "sentiment_score": "0.566",
+        "target": "WMB",
+        "aspects": "['Stock/Coverage/AnalystRatings']"
+      }
+    ]
+  },
+  "16309": {
+    "sentence": "@Stockoptionexpert: $MAT - 6%, big trader added 10000 April put contracts 3 days ago  http://stks.co/c1Ols",
+    "info": [
+      {
+        "snippets": "['big trader added 10000 April put contracts']",
+        "sentiment_score": "-0.576",
+        "target": "MAT",
+        "aspects": "['Stock/Options/Unusual Put Activity']"
+      }
+    ]
+  },
+  "16311": {
+    "sentence": "$FTI Breakout today after reporting earnings last night",
+    "info": [
+      {
+        "snippets": "['Breakout today']",
+        "sentiment_score": "0.554",
+        "target": "FTI",
+        "aspects": "['Stock/Technical Analysis/Breakout']"
+      }
+    ]
+  },
+  "16403": {
+    "sentence": "$PLUG bear raid",
+    "info": [
+      {
+        "snippets": "['bear raid']",
+        "sentiment_score": "-0.48",
+        "target": "PLUG",
+        "aspects": "['Stock/Price Action/Bearish']"
+      }
+    ]
+  },
+  "16405": {
+    "sentence": "$GPRO down 25% since Tue morning.",
+    "info": [
+      {
+        "snippets": "['down 25% since Tue morning.']",
+        "sentiment_score": "-0.527",
+        "target": "GPRO",
+        "aspects": "['Stock/Price Action/Bearish']"
+      }
+    ]
+  },
+  "16465": {
+    "sentence": "what #stocks large players are selling http://stks.co/t0Vel $CROX $GOGO $INO",
+    "info": [
+      {
+        "snippets": "['large players are selling']",
+        "sentiment_score": "-0.507",
+        "target": "INO",
+        "aspects": "['Stock/Price Action/Volatility/Selling Pressure']"
+      }
+    ]
+  },
+  "16468": {
+    "sentence": "$RNN More bleeding Monday.",
+    "info": [
+      {
+        "snippets": "['More bleeding Monday.']",
+        "sentiment_score": "-0.465",
+        "target": "RNN",
+        "aspects": "['Stock/Price Action/Bearish']"
+      }
+    ]
+  },
+  "16525": {
+    "sentence": "$CDTI bounce here on support or H&S setup this area is very important for bulls to not lose http://stks.co/c0mf3",
+    "info": [
+      {
+        "snippets": "['bounce here on support or H&S setup this area is very important for bulls']",
+        "sentiment_score": "0.374",
+        "target": "CDTI",
+        "aspects": "['Stock/Price Action']"
+      }
+    ]
+  },
+  "16526": {
+    "sentence": "$LNKD Daily Phase 2 retest - Price experiencing early rejection. Can it retest? http://stks.co/t04xX",
+    "info": [
+      {
+        "snippets": "['Price experiencing early rejection']",
+        "sentiment_score": "-0.228",
+        "target": "LNKD",
+        "aspects": "['Stock/Price Action/Bearish']"
+      }
+    ]
+  },
+  "16637": {
+    "sentence": "$TSLA You have to love these types of articles. SS interest rose on 12/15 on day before we hit our lows. http://stks.co/c1QKr",
+    "info": [
+      {
+        "snippets": "['SS interest rose on 12/15 on day before we hit our lows']",
+        "sentiment_score": "-0.405",
+        "target": "TSLA",
+        "aspects": "['Stock/Price Action/Bearish']"
+      }
+    ]
+  },
+  "16641": {
+    "sentence": "$KNDI Let's see some higher highs and higher lows rest of the day , slow and steady",
+    "info": [
+      {
+        "snippets": "[\"Let's see some higher highs and higher lows rest of the day\"]",
+        "sentiment_score": "0.396",
+        "target": "KNDI",
+        "aspects": "['Stock/Price Action']"
+      }
+    ]
+  },
+  "16688": {
+    "sentence": "$GS sells flat..I am out..",
+    "info": [
+      {
+        "snippets": "['sells flat..I am out..']",
+        "sentiment_score": "-0.541",
+        "target": "GS",
+        "aspects": "['Stock/Price Action/Bearish']"
+      }
+    ]
+  },
+  "16691": {
+    "sentence": "Synergy Pharma Soars 67% Today On Positive Phase 3 Results $SGYP http://stks.co/j2awg",
+    "info": [
+      {
+        "snippets": "['Soars 67% Today On Positive Phase 3 Results']",
+        "sentiment_score": "0.623",
+        "target": "SGYP",
+        "aspects": "['Stock/Price Action']"
+      }
+    ]
+  },
+  "16849": {
+    "sentence": "$AAPL AAPL finally breaking under the 49 M.A.. With no buybacks this week, look for AAPL to test the 120 support area.",
+    "info": [
+      {
+        "snippets": "['finally breaking under']",
+        "sentiment_score": "-0.2",
+        "target": "AAPL",
+        "aspects": "['Stock/Price Action/Bearish/Bearish Behavior']"
+      }
+    ]
+  },
+  "16856": {
+    "sentence": "$DGI technical alerts: Gilligan's Island Buy Setup, Stochastic Buy Signal, Lizard Bullish, Hammer Candlestick, Wid... http://stks.co/c29Nu",
+    "info": [
+      {
+        "snippets": "[\"Gilligan's Island Buy Setup, Stochastic Buy Signal\"]",
+        "sentiment_score": "0.564",
+        "target": "DGI",
+        "aspects": "['Stock/Signal/Buy Signal']"
+      }
+    ]
+  },
+  "16920": {
+    "sentence": "End Of Day Scan: Bullish MA  Crossovers $BBVA $PDS $NTLS $NGL $SBRCY $FGL $MTNOY $TTT  www.dailystockplays.com",
+    "info": [
+      {
+        "snippets": "['Bullish MA Crossovers']",
+        "sentiment_score": "0.457",
+        "target": "TTT",
+        "aspects": "['Stock/Technical Analysis']"
+      }
+    ]
+  },
+  "16925": {
+    "sentence": "@louiebeene vwap is 1.63, held the trend line. Should be on a LOT of radars. $NAVB",
+    "info": [
+      {
+        "snippets": "['held the trend lin']",
+        "sentiment_score": "0.325",
+        "target": "NAVB",
+        "aspects": "['Stock/Price Action']"
+      }
+    ]
+  },
+  "16971": {
+    "sentence": "$VMW  Got a nice push today following small sweepers of May C this morning",
+    "info": [
+      {
+        "snippets": "['Got a nice push today']",
+        "sentiment_score": "0.28",
+        "target": "VMW",
+        "aspects": "['Stock/Price Action/Bullish']"
+      }
+    ]
+  },
+  "16975": {
+    "sentence": "$DDD 3D Systems (DDD) Stock Receives Ratings Downgrade Today at Jefferies http://stks.co/g1cqd",
+    "info": [
+      {
+        "snippets": "['Stock Receives Ratings Downgrade']",
+        "sentiment_score": "-0.501",
+        "target": "DDD",
+        "aspects": "['Stock/Coverage/AnalystRatings/Downgrade']"
+      }
+    ]
+  },
+  "17020": {
+    "sentence": "$AAPL near a 3% drop thats a lot... now the best i can do is HOLD ER lol",
+    "info": [
+      {
+        "snippets": "['near a 3% drop thats a lot']",
+        "sentiment_score": "-0.304",
+        "target": "AAPL",
+        "aspects": "['Stock/Price Action/Bearish/Bearish Behavior']"
+      }
+    ]
+  },
+  "17025": {
+    "sentence": "$HCP Come to the party and buy this -gonna give solid gains and a dividend $$$$$$",
+    "info": [
+      {
+        "snippets": "['gonna give solid gains and a dividend']",
+        "sentiment_score": "0.52",
+        "target": "HCP",
+        "aspects": "['Corporate/Dividend Policy']"
+      }
+    ]
+  },
+  "17085": {
+    "sentence": "Why $MCD looks set to fall further. http://stks.co/f2fgj",
+    "info": [
+      {
+        "snippets": "['looks set to fall further']",
+        "sentiment_score": "-0.545",
+        "target": "MCD",
+        "aspects": "['Stock/Price Action/Bearish/Bearish Behavior']"
+      }
+    ]
+  },
+  "17087": {
+    "sentence": "@technik I still have a smaller $GILD pos. Being very tender with cash due to volatility. So reluctant to keep many big positions.",
+    "info": [
+      {
+        "snippets": "['Being very tender with cash due to volatility']",
+        "sentiment_score": "0.153",
+        "target": "GILD",
+        "aspects": "['Market/Volatility]"
+      }
+    ]
+  },
+  "17195": {
+    "sentence": "$SAVE long. https://t.co/yEJuS9cMlC",
+    "info": [
+      {
+        "snippets": "['long']",
+        "sentiment_score": "0.388",
+        "target": "SAVE",
+        "aspects": "['Stock/Price Action/Bullish/Bull Position']"
+      }
+    ]
+  },
+  "17209": {
+    "sentence": "@mugatushair Now it is time to short $TSLA",
+    "info": [
+      {
+        "snippets": "['Now it is time to short']",
+        "sentiment_score": "-0.385",
+        "target": "TSLA",
+        "aspects": "['Stock/Price Action/Volatility/Short Selling']"
+      }
+    ]
+  },
+  "17343": {
+    "sentence": "expecting  $SPY to close above 205.20 $AAPL",
+    "info": [
+      {
+        "snippets": "['expecting $SPY to close above 205.20']",
+        "sentiment_score": "0.385",
+        "target": "SPY",
+        "aspects": "['Stock/Price Action/Bullish']"
+      }
+    ]
+  },
+  "17345": {
+    "sentence": "$FB trending nicely, intraday.",
+    "info": [
+      {
+        "snippets": "['trending nicely, intraday.']",
+        "sentiment_score": "0.404",
+        "target": "FB",
+        "aspects": "['Stock/Price Action/Bullish/Bullish Behavior']"
+      }
+    ]
+  },
+  "17431": {
+    "sentence": "#Tesla: Model X Recall Adds To Reliability Issues $TSLA https://t.co/jVXQ4DoXnP",
+    "info": [
+      {
+        "snippets": "['Recall Adds To Reliability Issues']",
+        "sentiment_score": "-0.267",
+        "target": "TSLA",
+        "aspects": "['Corporate/Risks/Product Recall']"
+      }
+    ]
+  },
+  "17436": {
+    "sentence": "Microsoft joins the open-source Eclipse Foundation https://t.co/z8G5cZaKeU focus on collaboration & open business is a smart strategy! $MSFT",
+    "info": [
+      {
+        "snippets": "['joins the open-source Eclipse Foundation']",
+        "sentiment_score": "0.26",
+        "target": "MSFT",
+        "aspects": "['Corporate/Strategy']"
+      }
+    ]
+  },
+  "17793": {
+    "sentence": "Tesla to recall 2,700 Model X SUVs over seat issue https://t.co/OdPraN59Xq $TSLA https://t.co/xvn4blIwpy https://t.co/ThfvWTnRPs",
+    "info": [
+      {
+        "snippets": "['Tesla to recall 2,700 Model X SUVs over seat issue']",
+        "sentiment_score": "-0.31",
+        "target": "TSLA",
+        "aspects": "['Corporate/Risks/Product Recall']"
+      }
+    ]
+  },
+  "17794": {
+    "sentence": "Juniper tumbles on Q1 warning; Cisco also lower $JNPR $CSCO https://t.co/bGvIntk43h",
+    "info": [
+      {
+        "snippets": "['tumbles on Q1 warning']",
+        "sentiment_score": "-0.366",
+        "target": "JNPR",
+        "aspects": "['Corporate/Financial/Financial Results/Earnings/Profit Warning']"
+      }
+    ]
+  },
+  "18003": {
+    "sentence": "Most bullish stocks on Twitter during this dip. $YHOO $GDX $GOOGL $STZ $GOLD $EW $VZ $CELG $SBUX $SCTY more: https://t.co/iuZJelfwt3",
+    "info": [
+      {
+        "snippets": "['Most bullish stocks on Twitter during this dip']",
+        "sentiment_score": "0.408",
+        "target": "YHOO",
+        "aspects": "['Stock/Price Action/Bullish']"
+      }
+    ]
+  },
+  "18010": {
+    "sentence": "$TSLA <STUDY the CHARTS> Pullback_Time https://t.co/ZMDG0fb3I7",
+    "info": [
+      {
+        "snippets": "['study the charts']",
+        "sentiment_score": "-0.3",
+        "target": "TSLA",
+        "aspects": "['Stock/Technical Analysis']"
+      }
+    ]
+  },
+  "18126": {
+    "sentence": "bot $AMZN 600 weekly calls here @ 5.93",
+    "info": [
+      {
+        "snippets": "['bot $AMZN 600 weekly calls here']",
+        "sentiment_score": "0.659",
+        "target": "AMZN",
+        "aspects": "['Stock/Price Action/Bullish/Bull Position']"
+      }
+    ]
+  },
+  "18143": {
+    "sentence": "$FB watching for bounce tomorrow",
+    "info": [
+      {
+        "snippets": "['watching for bounce tomorrow']",
+        "sentiment_score": "0.366",
+        "target": "FB",
+        "aspects": "['Stock/Price Action/Bullish']"
+      }
+    ]
+  },
+  "18285": {
+    "sentence": "$SBUX heading for the 200DMA and certain doom if it can not hold there.",
+    "info": [
+      {
+        "snippets": "['heading for the 200DMA']",
+        "sentiment_score": "-0.437",
+        "target": "SBUX",
+        "aspects": "['Corporate/Technical Analysis']"
+      }
+    ]
+  },
+  "18307": {
+    "sentence": "$AMZN long into earnings. looks good over 600",
+    "info": [
+      {
+        "snippets": "['long into earnings. looks good over 600']",
+        "sentiment_score": "0.613",
+        "target": "AMZN",
+        "aspects": "['Stock/Price Action/Bullish/Bull Position']"
+      }
+    ]
+  },
+  "18471": {
+    "sentence": "$PYPL great vol flow trade here.. Love this company long time.",
+    "info": [
+      {
+        "snippets": "['great vol flow trade here']",
+        "sentiment_score": "0.408",
+        "target": "PYPL",
+        "aspects": "['Stock/Price Action/Bullish']"
+      }
+    ]
+  },
+  "18479": {
+    "sentence": "$ISRG PT raised to $700 from $640 at Leerink - keeps Outperform rated",
+    "info": [
+      {
+        "snippets": "['keeps Outperform rated']",
+        "sentiment_score": "0.489",
+        "target": "ISRG",
+        "aspects": "['Stock/Coverage/Stock Coverage']"
+      }
+    ]
+  },
+  "18635": {
+    "sentence": "$AAPL a new long IF 110.61 is broken. Targets are 112.19, 119.86 & 123.82. Bears must retake 102.77. $QQQ $NQ_F $NDX https://t.co/6l3m1wXChw",
+    "info": [
+      {
+        "snippets": "['a new long IF 110.61 is broken']",
+        "sentiment_score": "0.172",
+        "target": "QQQ",
+        "aspects": "['Stock/Signal/Buy Signal']"
+      }
+    ]
+  },
+  "18652": {
+    "sentence": "Thank you $GOOG (Google Alphabet) and $FB (Facebook) stocks! What a nice reversal.",
+    "info": [
+      {
+        "snippets": "['What a nice reversal.']",
+        "sentiment_score": "0.318",
+        "target": "GOOG",
+        "aspects": "['Stock/Price Action']"
+      }
+    ]
+  },
+  "18747": {
+    "sentence": "$FB gone green on day",
+    "info": [
+      {
+        "snippets": "['gone green on day']",
+        "sentiment_score": "0.476",
+        "target": "FB",
+        "aspects": "['Stock/Price Action/Bullish/Bullish Behavior']"
+      }
+    ]
+  },
+  "18750": {
+    "sentence": "$AMZN rejected that 604 to the penny. Weak open and it goes r/g within first 30 mins, could have 8-10 points in it. https://t.co/58tEAEXxpE",
+    "info": [
+      {
+        "snippets": "['Weak open and it goes r/g within first 30 mins,']",
+        "sentiment_score": "-0.229",
+        "target": "AMZN",
+        "aspects": "['Stock/Price Action/Bearish/Bearish Behavior']"
+      }
+    ]
+  },
+  "18857": {
+    "sentence": "$DISH weakness continues again. 49.43 area resistance after last week",
+    "info": [
+      {
+        "snippets": "['weakness continues again']",
+        "sentiment_score": "-0.41",
+        "target": "DISH",
+        "aspects": "['Stock/Price Action/Bearish']"
+      }
+    ]
+  },
+  "18867": {
+    "sentence": "$AAPL iPhone shipments on track to exceed forecasts - MarketWatch https://t.co/2CXahJIX7d",
+    "info": [
+      {
+        "snippets": "['shipments on track to exceed forecasts']",
+        "sentiment_score": "0.367",
+        "target": "AAPL",
+        "aspects": "['Corporate/Sales']"
+      }
+    ]
+  },
+  "19003": {
+    "sentence": "Baird likes $TSLA - upgrades to outperform, lifts price target to $300. Research firm also sees no capital raise necessary in next few qtrs",
+    "info": [
+      {
+        "snippets": "['upgrades to outperform, lifts price target']",
+        "sentiment_score": "0.61",
+        "target": "TSLA",
+        "aspects": "['Stock/Coverage/AnalystRatings/Upgrade']"
+      }
+    ]
+  },
+  "19007": {
+    "sentence": "$tsla X recall not a big deal... the problem is now they will have an excuse to guide way way lower...",
+    "info": [
+      {
+        "snippets": "['recall not a big deal']",
+        "sentiment_score": "0.003",
+        "target": "TSLA",
+        "aspects": "['Corporate/Risks/Product Recall']"
       }
     ]
   }
