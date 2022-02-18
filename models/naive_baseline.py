@@ -41,15 +41,18 @@ class NaiveBaseline(BaseModel):
         self.test_dataset = None
         self.learning_rate = self.config.train.learning_rate
 
-    def load_data(self):
-        """Loads and preprocesses data"""
-        LOG.info(f'Loading {self.config.data.path} dataset...')
-        dataset = DataLoader().load_data(self.config.data)
+    def load_datasets(self):
+        """Loads and preprocesses data and splits into train, validate, and test sets"""
+        LOG.info(f'Loading {self.config.data.train_path} dataset...')
+        train_dataset = DataLoader().load_data(self.config.data.train_path)
+        LOG.info(f'Loading {self.config.data.test_path} dataset...')
+        test_dataset = DataLoader().load_data(self.config.data.test_path)
         pre_process_steps = [('Aspect One Hot Encoder', AspectOneHotEncoder(self.data_config)),
                              ('TF-IDF Headline Tokenizer', HeadlineTFIDFTokenizer(self.data_config))]
         pipe = Pipeline(pre_process_steps)
-        self.train_dataset, self.val_dataset, self.test_dataset = DataLoader.preprocess_data(dataset, self.data_config,
-                                                                                             pipe)
+        self.train_dataset, self.val_dataset, self.test_dataset = DataLoader.preprocess_data(train_dataset,
+                                                                                             test_dataset,
+                                                                                             self.data_config, pipe)
 
     def build(self):
         """Builds the model"""

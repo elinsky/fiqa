@@ -9,11 +9,11 @@ class DataLoader:
     """Data Loader class"""
 
     @staticmethod
-    def load_data(data_config) -> tf.data.Dataset:
-        """Loads dataset from path"""
+    def load_data(file_path) -> tf.data.Dataset:
+        """Loads dataset from path. Does as minimal pre-processing as possible."""
 
         # Load data from file
-        f = open(data_config.path)
+        f = open(file_path)
         data = json.load(f)
         headlines = []
         sentiments = []
@@ -36,24 +36,22 @@ class DataLoader:
         return dataset
 
     @staticmethod
-    def preprocess_data(dataset, data_config, pipeline: Pipeline):
+    def preprocess_data(train_dataset, test_dataset, data_config, pipeline: Pipeline):
         """Preprocess and split into training, validation, and test sets"""
 
-        # Shuffle and split
-        dataset = dataset.shuffle(data_config.buffer_size, data_config.seed)
-        train_dataset, rest = DataLoader._split_dataset(dataset, data_config.train_split)
-        validation_dataset, test_dataset = DataLoader._split_dataset(rest, data_config.validation_split / (
-                1.0 - data_config.train_split))
+        # Shuffle and split train dataset
+        train_shuffled = train_dataset.shuffle(data_config.buffer_size, data_config.seed)
+        train_split, val_split = DataLoader._split_dataset(train_shuffled, data_config.train_split)
 
-        # Preprocess training data
-        pipeline.fit(train_dataset)
-        train_dataset = pipeline.transform(train_dataset)
+        # Fit pipeline on training data then transform training data
+        pipeline.fit(train_split)
+        train_split_transformed = pipeline.transform(train_split)
 
-        # Preprocess validation and test data
-        validation_dataset = pipeline.transform(validation_dataset)
-        test_dataset = pipeline.transform(test_dataset)
+        # Transform validation and test data
+        val_split_transformed = pipeline.transform(val_split)
+        test_split_transformed = pipeline.transform(test_dataset)
 
-        return train_dataset, validation_dataset, test_dataset
+        return train_split_transformed, val_split_transformed, test_split_transformed
 
     @staticmethod
     def _clean_aspect(aspect: str) -> Tuple[str, str]:

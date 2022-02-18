@@ -2,7 +2,8 @@
 
 CONFIG = {
     'data': {
-        'path': 'data/task1_headline_ABSA_train.json',
+        'train_path': 'data/task1_headline_ABSA_train.json',
+        'test_path': 'data/task1_headline_ABSA_test.json',
         'n_level_1_classes': 4,
         'n_level_2_corporate': 12,
         'n_level_2_economy': 2,
@@ -13,8 +14,7 @@ CONFIG = {
         'buffer_size': 1000,
         'batch_size': 32,
         'train_split': 0.80,
-        'validation_split': 0.10,
-        'test_split': 0.10,
+        'validation_split': 0.20,
         'aspect_labels': [['Corporate, Appointment'], ['Corporate, Company Communication'],
                           ['Corporate, Dividend Policy'], ['Corporate, Financial'], ['Corporate, Legal'],
                           ['Corporate, M&A'], ['Corporate, Regulatory'], ['Corporate, Reputation'],

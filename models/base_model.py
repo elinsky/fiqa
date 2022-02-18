@@ -11,7 +11,7 @@ class BaseModel(ABC):
         self.config = Config.from_json(cfg)
 
     @abstractmethod
-    def load_data(self):
+    def load_datasets(self):
         pass
 
     @abstractmethod
