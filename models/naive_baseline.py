@@ -81,13 +81,13 @@ class NaiveBaseline(BaseModel):
         trainer.train()
 
     def evaluate(self):
-        """Predicts results for the test set"""
+        """Evaluate the trained model on the test dataset."""
         aspect_predictions = []
         sentiment_predictions = []
         aspect_labels = []
         sentiment_labels = []
 
-        for headline, aspect_label, sentiment_label in self.val_dataset.batch(1):
+        for headline, aspect_label, sentiment_label in self.test_dataset.batch(1):
             # Make prediction
             sentiment_pred, aspect_pred = self.model(headline)
             # Get most probable class label
@@ -103,8 +103,8 @@ class NaiveBaseline(BaseModel):
         print(classification_report(aspect_labels, aspect_predictions))
         print('aspect level 2 Macro F1 score:', f1_score(aspect_labels, aspect_predictions, average='macro'))
 
-        print('sentiment MSE:', mean_squared_error(sentiment_labels, sentiment_predictions))
-        print('sentiment R^2:', r2_score(sentiment_labels, sentiment_predictions))
+        print('Sentiment MSE:', mean_squared_error(sentiment_labels, sentiment_predictions))
+        print('Sentiment R^2:', r2_score(sentiment_labels, sentiment_predictions))
 
         # TODO calc F1 and error for aspect 1
 
