@@ -40,7 +40,8 @@ class DataLoader:
         """Preprocess and split into training, validation, and test sets"""
 
         # Shuffle and split train dataset
-        train_shuffled = train_dataset.shuffle(data_config.buffer_size, data_config.seed)
+        train_shuffled = train_dataset.shuffle(data_config.buffer_size, data_config.seed,
+                                               reshuffle_each_iteration=False)
         train_split, val_split = DataLoader._split_dataset(train_shuffled, data_config.train_split)
 
         # Fit pipeline on training data then transform training data

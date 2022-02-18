@@ -37,14 +37,13 @@ class Trainer:
         self.model_save_path = 'saved_models/'
 
     def train_step(self, batch):
-        trainable_variables = self.model.trainable_variables
         headlines, aspect_labels, sentiment_labels = batch
         with tf.GradientTape() as tape:
             sentiment_predictions, aspect_predictions = self.model(headlines)
             step_loss = self.loss_fn(aspect_labels, aspect_predictions, sentiment_labels, sentiment_predictions)
 
-        grads = tape.gradient(step_loss, trainable_variables)
-        self.optimizer.apply_gradients(zip(grads, trainable_variables))
+        grads = tape.gradient(step_loss, self.model.trainable_variables)
+        self.optimizer.apply_gradients(zip(grads, self.model.trainable_variables))
         self.train_aspect_metric.update_state(aspect_labels, aspect_predictions)
         self.train_sentiment_metric.update_state(sentiment_labels, sentiment_predictions)
         self.train_loss_metric.update_state(step_loss)
