@@ -4,11 +4,15 @@
 from abc import ABC, abstractmethod
 from utils.config import Config
 
+import tensorflow as tf
+
 
 class BaseModel(ABC):
     """Abstract Model class that is inherited to all models"""
+
     def __init__(self, cfg):
         self.config = Config.from_json(cfg)
+        tf.random.set_seed(self.config.data.seed)
 
     @abstractmethod
     def load_datasets(self):
@@ -25,4 +29,3 @@ class BaseModel(ABC):
     @abstractmethod
     def evaluate(self):
         pass
-
