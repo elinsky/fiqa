@@ -63,9 +63,9 @@ class NeuralBaseline(BaseModel):
     def load_datasets(self):
         """Loads and preprocesses data and splits into train, validate, and test sets"""
         LOG.info(f'Loading {self.config.data.train_path} dataset...')
-        train_dataset = DataLoader().load_data(self.config.train_path)
+        train_dataset = DataLoader().load_data(self.config.data.train_path)
         LOG.info(f'Loading {self.config.data.test_path} dataset...')
-        test_dataset = DataLoader().load_data(self.config.test_path)
+        test_dataset = DataLoader().load_data(self.config.data.test_path)
         pre_process_steps = [('Aspect One Hot Encoder', AspectOneHotEncoder(self.data_config)),
                              ('BERT Headline Tokenizer', BertHeadlineTokenizer(self.data_config))]
         pipe = Pipeline(pre_process_steps)
