@@ -137,3 +137,9 @@ dmypy.json
 # Project Artifacts
 logs/*
 tf_ckpts/*
+
+# Latex
+*.aux
+*.bbl
+*.blg
+*.out
