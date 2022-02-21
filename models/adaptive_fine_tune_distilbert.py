@@ -15,6 +15,9 @@
 # --do_train
 # --tokenizer <path/to/custom/tokenizer/directory>
 
+# After adaptive fine-tuning, you can load the model with the following:
+# model = transformers.TFDistilBertModel.from_pretrained("<path/to/directory/for/saved/model>")
+
 import logging
 import math
 import os
