@@ -19,7 +19,7 @@ def train_tokenizer(dataset_dir: str, target_dir: str):
                  for name in files]
 
     # Create tokenizer with an EMPTY WordPiece model
-    tokenizer = Tokenizer(tokenizers.models.WordPiece(unl_token="[UNK]"))
+    tokenizer = Tokenizer(tokenizers.models.WordPiece(unk_token="[UNK]"))
 
     # Normalizes raw text. Cleans text by removing control characters and replacing all whitespace characters with
     # the classic one. Converts to lowercase. Applies Normalization Form D (NFD) Unicode normalization.
