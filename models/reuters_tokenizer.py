@@ -14,9 +14,12 @@ def train_tokenizer(dataset_dir: str, target_dir: str):
     # 3) Model
     # 4) Post-Processing
 
-    doc_paths = [os.path.join(dataset_dir, name)
-                 for root, dirs, files in os.walk(dataset_dir)
-                 for name in files]
+    # Get list of paths to documents
+    doc_paths = []
+    for root, sub_folder, files in os.walk(dataset_dir):
+        for item in files:
+            file_name_path = str(os.path.join(root, item))
+            doc_paths.append(file_name_path)
 
     # Create tokenizer with an EMPTY WordPiece model
     tokenizer = Tokenizer(tokenizers.models.WordPiece(unk_token="[UNK]"))
