@@ -8,7 +8,7 @@ with open('configs/logging_config.yaml', 'r') as f:
     logging.captureWarnings(True)
 
 
-def get_logger(name: str):
+def get_logger(name: str) -> logging.Logger:
     """Logs a message
     Args:
     name(str): name of logger
