@@ -3,13 +3,14 @@ from typing import Tuple
 
 import tensorflow as tf
 from sklearn.pipeline import Pipeline
+from utils.config import Config
 
 
 class DataLoader:
     """Data Loader class"""
 
     @staticmethod
-    def load_data(file_path) -> tf.data.Dataset:
+    def load_data(file_path: str) -> tf.data.Dataset:
         """Loads dataset from path. Does as minimal pre-processing as possible."""
 
         # Load data from file
@@ -36,7 +37,8 @@ class DataLoader:
         return dataset
 
     @staticmethod
-    def preprocess_data(train_dataset, test_dataset, data_config, pipeline: Pipeline):
+    def preprocess_data(train_dataset: tf.data.Dataset, test_dataset: tf.data.Dataset, data_config: Config,
+                        pipeline: Pipeline) -> Tuple[tf.data.Dataset, tf.data.Dataset, tf.data.Dataset]:
         """Preprocess and split into training, validation, and test sets"""
 
         # Shuffle and split train dataset
