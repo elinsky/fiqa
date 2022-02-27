@@ -10,8 +10,8 @@ from dataloader.dataloader import DataLoader
 from dataloader.pipelines import AspectOneHotEncoder, BertHeadlineTokenizer
 from executor.trainer import Trainer
 from utils.logger import get_logger
-from .base_model import BaseModel
 # internal
+from .base_model import BaseModel
 from .hierarchical_classifier import HierarchicalClassifier
 
 LOG = get_logger('Neural Baseline')
