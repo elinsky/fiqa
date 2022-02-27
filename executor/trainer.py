@@ -1,5 +1,6 @@
 import datetime
 import os
+from typing import Tuple
 
 import tensorflow as tf
 
@@ -36,7 +37,8 @@ class Trainer:
 
         self.model_save_path = 'saved_models/'
 
-    def train_step(self, batch):
+    def train_step(self, batch: Tuple[tf.data.Dataset, tf.data.Dataset, tf.data.Dataset]) \
+            -> Tuple[tf.Tensor, tf.Tensor, tf.Tensor]:
         headlines, aspect_labels, sentiment_labels = batch
         with tf.GradientTape() as tape:
             sentiment_predictions, aspect_predictions = self.model(headlines)
@@ -81,7 +83,8 @@ class Trainer:
         save_path = os.path.join(self.model_save_path, 'naive_baseline/1/')
         # tf.saved_model.save(self.model, save_path) # TODO
 
-    def test_step(self, batch):
+    def test_step(self, batch: Tuple[tf.data.Dataset, tf.data.Dataset, tf.data.Dataset]) \
+            -> Tuple[tf.Tensor, tf.Tensor, tf.Tensor]:
         # can use for both validation and test
         headlines, aspect_labels, sentiment_labels = batch
         sentiment_predictions, aspect_predictions = self.model(headlines)
@@ -92,8 +95,8 @@ class Trainer:
 
         return step_loss, aspect_predictions, sentiment_predictions
 
-    def test(self, epoch):
-        # can use for both validation and test
+    def test(self, epoch: int):
+        # Epoch parameter is only used for logging
         for val_step, val_batch in enumerate(self.val_dataset):
             _, val_aspect_predictions, val_sentiment_predictions = self.test_step(val_batch)
 
@@ -111,14 +114,14 @@ class Trainer:
         self.val_sentiment_metric.reset_states()
         self.val_loss_metric.reset_states()
 
-    def _write_train_summary(self, loss, epoch):
+    def _write_train_summary(self, loss: float, epoch: int):
         with self.train_summary_writer.as_default():
             tf.summary.scalar('train loss', loss, step=epoch)
             tf.summary.scalar('train aspect accuracy', self.train_aspect_metric.result(), step=epoch)
             tf.summary.scalar('train sentiment MSE', self.train_sentiment_metric.result(), step=epoch)
             # tensorboard --logdir logs/gradient_tape
 
-    def _write_val_summary(self, loss, epoch):
+    def _write_val_summary(self, loss: float, epoch: int):
         with self.val_summary_writer.as_default():
             tf.summary.scalar('val loss', loss, step=epoch)
             tf.summary.scalar('val aspect accuracy', self.val_aspect_metric.result(), step=epoch)
