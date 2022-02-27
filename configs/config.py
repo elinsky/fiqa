@@ -27,7 +27,7 @@ CONFIG = {
     'train': {
         'batch_size': 32,
         'epochs': 10,
-        'learning_rate': 1e-3
+        'learning_rate': 1e-4
     },
     'model': {
         'vocab_size': 1000

@@ -1,10 +1,12 @@
 import typing
+
 import tensorflow as tf
 import tensorflow_datasets as tdfs
-from transformers import AutoTokenizer, BertTokenizerFast, PreTrainedTokenizerBase
+import transformers
 from sklearn.base import BaseEstimator, TransformerMixin
 from sklearn.preprocessing import OneHotEncoder
 from tensorflow.keras.preprocessing.text import Tokenizer
+from transformers import AutoTokenizer, PreTrainedTokenizerBase
 
 
 class AspectOneHotEncoder(BaseEstimator, TransformerMixin):
@@ -120,6 +122,33 @@ class BertHeadlineTokenizer(BaseEstimator, TransformerMixin):
         token_type_ids_dataset = tf.data.Dataset.from_tensor_slices(token_type_ids, name='token_type_ids')
         attention_mask_dataset = tf.data.Dataset.from_tensor_slices(attention_mask, name='attention_mask')
         headlines_dataset = tf.data.Dataset.zip((input_ids_dataset, token_type_ids_dataset, attention_mask_dataset))
+        transformed_dataset = tf.data.Dataset.zip((headlines_dataset, aspects, sentiments))
+
+        return transformed_dataset
+
+
+class DistilBertHeadlineTokenizer(BaseEstimator, TransformerMixin):
+    def __init__(self, data_config):
+        self.tokenizer = transformers.DistilBertTokenizerFast.from_pretrained(
+            './configs/reuters_tokenizer')
+
+    def fit(self, X, y=None):
+        return self
+
+    def transform(self, X, y=None):
+        # Unpack dataset https://github.com/tensorflow/tensorflow/issues/12851#issuecomment-669863983
+        headlines, aspects, sentiments = [tf.data.Dataset.from_tensor_slices(list(x)) for x in zip(*X)]
+        # Convert headlines back to list of string
+        headlines_str = list(map(tf.compat.as_str_any, tdfs.as_numpy(headlines)))
+        # Tokenize
+        # Distilbert does not have token_type_ids
+        output = self.tokenizer(headlines_str, pad_to_max_length=True).data
+        input_ids, attention_mask = output['input_ids'], output['attention_mask']
+
+        # Package back up
+        input_ids_dataset = tf.data.Dataset.from_tensor_slices(input_ids, name='input_ids')
+        attention_mask_dataset = tf.data.Dataset.from_tensor_slices(attention_mask, name='attention_mask')
+        headlines_dataset = tf.data.Dataset.zip((input_ids_dataset, attention_mask_dataset))
         transformed_dataset = tf.data.Dataset.zip((headlines_dataset, aspects, sentiments))
 
         return transformed_dataset

@@ -67,6 +67,7 @@ def train_tokenizer(dataset_dir: str, target_dir: str):
     # Wrap the tokenizers.models.WordPiece object inside a transformers.BertTokenizerFast object. Without this step we
     # won't be able to instantiate our pre-trained tokenizer and use it with a transformer model from the transformers
     # library.
+    # TODO change to DistilBertTokenizerFast and retrain and save new configs
     wrapped_tokenizer = BertTokenizerFast(tokenizer_object=tokenizer)
 
     # Save tokenizer to disk. Re-load with transformers.BertTokenizerFast.from_pretrained(tokenizer_directory)

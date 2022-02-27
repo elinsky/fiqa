@@ -1,13 +1,12 @@
 import numpy as np
 import tensorflow as tf
+import transformers
 from sklearn.metrics import classification_report, f1_score, mean_squared_error, r2_score, accuracy_score
 from sklearn.pipeline import Pipeline
 from tensorflow.keras.layers import Dense
-from transformers import TFBertModel, TFAutoModelForSequenceClassification
-import transformers
 
 from dataloader.dataloader import DataLoader
-from dataloader.pipelines import AspectOneHotEncoder, BertHeadlineTokenizer
+from dataloader.pipelines import AspectOneHotEncoder, DistilBertHeadlineTokenizer
 from executor.trainer import Trainer
 from utils.logger import get_logger
 from .base_model import BaseModel
@@ -17,25 +16,27 @@ from .hierarchical_classifier import HierarchicalClassifier
 LOG = get_logger('Neural Baseline')
 
 
-class NeuralBaselineModel(tf.keras.Model):
+class DistilBertModel(tf.keras.Model):
 
     def __init__(self):
-        super(NeuralBaselineModel, self).__init__(name='NeuralBaselineModel')
+        super(DistilBertModel, self).__init__(name='DistilBert')
         self.aspect_classifier = HierarchicalClassifier(4, 12, 2, 4, 9)
         self.sentiment_regression = Dense(units=1, activation=None, use_bias=True)
+        self.distilbert = transformers.TFDistilBertModel.from_pretrained("./models/reuters_bert")
 
-        # In order to save the model, the bert layer needs to be a subclass of tf.keras.layers.Layer. Hence, the need to
-        # use the .bert attribute, which is a huggingface 'MainLayer' object and has the @keras_serializable decorator.
-        # https://github.com/huggingface/transformers/blob/0f69b924fbda6a442d721b10ece38ccfc6b67275/src/transformers/models/bert/modeling_tf_bert.py#L696
-        self.bert = TFBertModel.from_pretrained('bert-base-uncased', output_hidden_states=True).bert
-        self.fc = tf.keras.layers.Dense(512, activation='relu')
-        self.drop = tf.keras.layers.Dropout(0.5)
-        assert isinstance(self.bert, tf.keras.layers.Layer)
+        self.fc1 = tf.keras.layers.Dense(512, activation='relu')
+        self.fca1 = tf.keras.layers.Dense(512, activation='relu')
+        self.fc2 = tf.keras.layers.Dense(512, activation='relu')
+        self.fc3 = tf.keras.layers.Dense(27, activation='relu')
+        self.bn1 = tf.keras.layers.BatchNormalization()
+        self.drop1 = tf.keras.layers.Dropout(0.5)
+        self.dropa1 = tf.keras.layers.Dropout(0.5)
+        assert isinstance(self.distilbert, tf.keras.layers.Layer)
 
     def call(self, inputs):
-        input_ids, token_type_ids, attention_mask = inputs
-        bert_outputs = self.bert(input_ids, token_type_ids, attention_mask)
-        x = bert_outputs.last_hidden_state  # (batch size, 28, 768)
+        input_ids, attention_mask = inputs
+        distilbert_outputs = self.distilbert(input_ids, attention_mask)  # Distilbert does not take token_type_ids
+        x = distilbert_outputs.last_hidden_state  # (batch size, 28, 768)
 
         attention_mask = tf.expand_dims(attention_mask, 2)  # (batch size, 28) -> (batch size, 28, 1).
         attention_mask = tf.cast(attention_mask, dtype=tf.float32)
@@ -44,8 +45,8 @@ class NeuralBaselineModel(tf.keras.Model):
         den = tf.math.reduce_sum(attention_mask, axis=1)  # (batch_size, 28, 1) -> (batch size, 1)
         se = tf.math.reduce_sum(se, axis=1) / den  # (batch_size, 28, 768) -> (batch size, 768)
 
-        x = self.drop(se)
-        x = self.fc(x)
+        x = self.drop1(se)
+        x = self.fc1(x)
 
         aspect_prob = self.aspect_classifier(x)  # Probability distribution over L2 classes (batch size, 27)
         sentiment_logits = self.sentiment_regression(x)  # (batch size, 1)
@@ -53,7 +54,7 @@ class NeuralBaselineModel(tf.keras.Model):
         return sentiment_logits, aspect_prob
 
 
-class NeuralBaseline(BaseModel):
+class DistilBert(BaseModel):
 
     def __init__(self, config):
         super().__init__(config)
@@ -73,7 +74,7 @@ class NeuralBaseline(BaseModel):
         LOG.info(f'Loading {self.config.data.test_path} dataset...')
         test_dataset = DataLoader().load_data(self.config.data.test_path)
         pre_process_steps = [('Aspect One Hot Encoder', AspectOneHotEncoder(self.data_config)),
-                             ('BERT Headline Tokenizer', BertHeadlineTokenizer(self.data_config))]
+                             ('DistilBert Headline Tokenizer', DistilBertHeadlineTokenizer(self.data_config))]
         pipe = Pipeline(pre_process_steps)
         self.train_dataset, self.val_dataset, self.test_dataset = DataLoader.preprocess_data(train_dataset,
                                                                                              test_dataset,
@@ -81,13 +82,13 @@ class NeuralBaseline(BaseModel):
 
     def build(self):
         """Builds the model"""
-        self.model = NeuralBaselineModel()
+        self.model = DistilBertModel()
         LOG.info('Keras Model was built successfully')
 
     def train(self):
         """Compiles and trains the model"""
         LOG.info('Training started')
-        optimizer = tf.keras.optimizers.Adam(learning_rate=self.learning_rate)
+        optimizer = tf.keras.optimizers.RMSprop(learning_rate=self.learning_rate)
         aspect_loss_fn = tf.keras.losses.CategoricalCrossentropy(from_logits=False)
         sentiment_loss_fn = tf.keras.losses.MeanSquaredError()
 
