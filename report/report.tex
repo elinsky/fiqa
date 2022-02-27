@@ -8,6 +8,9 @@
 \usepackage{booktabs}                  % professional-quality tables
 \usepackage{hyperref}                  % Creates clickable links
 \hypersetup{pageanchor=false}          % Get rid of warning: pdfTeX warning (ext4): destination with the same identifier (name{page.1}) has been already used, duplicate ignored
+\usepackage[mode=buildnew]{standalone}% requires -shell-escape
+\usepackage{tikz}
+\usepackage{xcolor}
 %\usepackage{acl}
 % Page numbers in top right
 \usepackage{fancyhdr}
@@ -22,6 +25,14 @@
 }
 \setlength{\headheight}{13.66pt}
 % End page numbers
+
+% Use the xcolor library to define custom colors
+\definecolor{pink}{RGB}{247,225,225}
+\definecolor{orange}{RGB}{250,227,192}
+\definecolor{yellow}{RGB}{242,244,198}
+\definecolor{blue}{RGB}{201,231,245}
+\definecolor{purple}{RGB}{220,223,238}
+\definecolor{green}{RGB}{209,230,209}
 
 % bibliography
 \bibliographystyle{chicago}
