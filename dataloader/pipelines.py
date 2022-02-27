@@ -1,4 +1,4 @@
-import typing
+from typing import List, Tuple
 
 import tensorflow as tf
 import tensorflow_datasets as tdfs
@@ -8,9 +8,11 @@ from sklearn.preprocessing import OneHotEncoder
 from tensorflow.keras.preprocessing.text import Tokenizer
 from transformers import AutoTokenizer, PreTrainedTokenizerBase
 
+from utils.config import Config
+
 
 class AspectOneHotEncoder(BaseEstimator, TransformerMixin):
-    def __init__(self, data_config):
+    def __init__(self, data_config: Config):
         self.one_hot_encoder = OneHotEncoder()
         self.aspect_labels = data_config.aspect_labels
 
@@ -71,8 +73,8 @@ class HeadlineTFIDFTokenizer(BaseEstimator, TransformerMixin):
         return transformed
 
 
-def tokenize_sentences(sentences: typing.List[str], tokenizer: PreTrainedTokenizerBase) \
-        -> typing.Tuple[tf.Tensor, tf.Tensor, tf.Tensor]:
+def tokenize_sentences(sentences: List[str], tokenizer: PreTrainedTokenizerBase) \
+        -> Tuple[tf.Tensor, tf.Tensor, tf.Tensor]:
     """
     Given a list of sentences and a tokenizer, this tokenizes the sentences
     and returns a tuple of input_ids, token_type_ids, and attention_mask as
@@ -135,7 +137,7 @@ class DistilBertHeadlineTokenizer(BaseEstimator, TransformerMixin):
     def fit(self, X, y=None):
         return self
 
-    def transform(self, X, y=None):
+    def transform(self, X, y=None) -> tf.data.Dataset:
         # Unpack dataset https://github.com/tensorflow/tensorflow/issues/12851#issuecomment-669863983
         headlines, aspects, sentiments = [tf.data.Dataset.from_tensor_slices(list(x)) for x in zip(*X)]
         # Convert headlines back to list of string
