@@ -1,3 +1,5 @@
+from typing import Tuple, List
+
 import numpy as np
 import tensorflow as tf
 import transformers
@@ -33,8 +35,8 @@ class DistilBertModel(tf.keras.Model):
         self.dropa1 = tf.keras.layers.Dropout(0.5)
         assert isinstance(self.distilbert, tf.keras.layers.Layer)
 
-    def call(self, inputs):
-        input_ids, attention_mask = inputs
+    def call(self, inputs: Tuple[tf.Tensor, tf.Tensor]) -> Tuple[tf.Tensor, tf.Tensor]:
+        input_ids, attention_mask = inputs  # Unpack inputs.
         distilbert_outputs = self.distilbert(input_ids, attention_mask)  # Distilbert does not take token_type_ids
         x = distilbert_outputs.last_hidden_state  # (batch size, 28, 768)
 
@@ -106,7 +108,7 @@ class DistilBert(BaseModel):
                           train_mse_metric, val_acc_metric, val_mse_metric, self.epochs)
         trainer.train()
 
-    def evaluate(self):
+    def evaluate(self) -> Tuple[List[int], List[float], List[int], List[float]]:
         """Evaluate the trained model on the test dataset."""
         aspect_predictions = []
         sentiment_predictions = []
@@ -117,9 +119,9 @@ class DistilBert(BaseModel):
             # Make prediction
             sentiment_pred, aspect_pred = self.model(headline)
             # Get most probable class label
-            aspect_pred = np.argmax(aspect_pred)
+            aspect_pred = int(np.argmax(aspect_pred))
             # Get actual class label
-            aspect_label = np.argmax(aspect_label)
+            aspect_label = int(np.argmax(aspect_label))
 
             sentiment_predictions.append(float(sentiment_pred))
             sentiment_labels.append(float(sentiment_label))

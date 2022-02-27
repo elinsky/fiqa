@@ -1,10 +1,11 @@
+from typing import Tuple, List
+
 import numpy as np
 import tensorflow as tf
 from sklearn.metrics import classification_report, f1_score, mean_squared_error, r2_score, accuracy_score
 from sklearn.pipeline import Pipeline
 from tensorflow.keras.layers import Dense
-from transformers import TFBertModel, TFAutoModelForSequenceClassification
-import transformers
+from transformers import TFBertModel
 
 from dataloader.dataloader import DataLoader
 from dataloader.pipelines import AspectOneHotEncoder, BertHeadlineTokenizer
@@ -32,7 +33,7 @@ class NeuralBaselineModel(tf.keras.Model):
         self.drop = tf.keras.layers.Dropout(0.5)
         assert isinstance(self.bert, tf.keras.layers.Layer)
 
-    def call(self, inputs):
+    def call(self, inputs: Tuple[tf.Tensor, tf.Tensor, tf.Tensor]) -> Tuple[tf.Tensor, tf.Tensor]:
         input_ids, token_type_ids, attention_mask = inputs
         bert_outputs = self.bert(input_ids, token_type_ids, attention_mask)
         x = bert_outputs.last_hidden_state  # (batch size, 28, 768)
@@ -105,7 +106,7 @@ class NeuralBaseline(BaseModel):
                           train_mse_metric, val_acc_metric, val_mse_metric, self.epochs)
         trainer.train()
 
-    def evaluate(self):
+    def evaluate(self) -> Tuple[List[int], List[float], List[int], List[float]]:
         """Evaluate the trained model on the test dataset."""
         aspect_predictions = []
         sentiment_predictions = []
@@ -116,9 +117,9 @@ class NeuralBaseline(BaseModel):
             # Make prediction
             sentiment_pred, aspect_pred = self.model(headline)
             # Get most probable class label
-            aspect_pred = np.argmax(aspect_pred)
+            aspect_pred = int(np.argmax(aspect_pred))
             # Get actual class label
-            aspect_label = np.argmax(aspect_label)
+            aspect_label = int(np.argmax(aspect_label))
 
             sentiment_predictions.append(float(sentiment_pred))
             sentiment_labels.append(float(sentiment_label))

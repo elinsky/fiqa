@@ -10,7 +10,7 @@ import tensorflow as tf
 class BaseModel(ABC):
     """Abstract Model class that is inherited to all models"""
 
-    def __init__(self, cfg):
+    def __init__(self, cfg: Config):
         self.config = Config.from_json(cfg)
         tf.random.set_seed(self.config.data.seed)
 

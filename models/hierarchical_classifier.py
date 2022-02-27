@@ -17,7 +17,7 @@ class HierarchicalClassifier(tf.keras.layers.Layer):
         self.level_2_market_classifier = Dense(units=n_market, activation=None, use_bias=True)
         self.level_2_stock_classifier = Dense(units=n_stock, activation=None, use_bias=True)
 
-    def call(self, inputs):
+    def call(self, inputs: tf.Tensor) -> tf.Tensor:
         batch_size = inputs.shape[0]
 
         # Calc logits for individual classifiers

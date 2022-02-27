@@ -1,3 +1,5 @@
+from typing import List, Tuple
+
 import numpy as np
 import tensorflow as tf
 from sklearn.metrics import classification_report, f1_score, mean_squared_error, r2_score, accuracy_score
@@ -80,7 +82,7 @@ class NaiveBaseline(BaseModel):
                           train_mse_metric, val_acc_metric, val_mse_metric, self.epochs)
         trainer.train()
 
-    def evaluate(self):
+    def evaluate(self) -> Tuple[List[int], List[float], List[int], List[float]]:
         """Evaluate the trained model on the test dataset."""
         aspect_predictions = []
         sentiment_predictions = []
@@ -91,9 +93,9 @@ class NaiveBaseline(BaseModel):
             # Make prediction
             sentiment_pred, aspect_pred = self.model(headline)
             # Get most probable class label
-            aspect_pred = np.argmax(aspect_pred)
+            aspect_pred = int(np.argmax(aspect_pred))
             # Get actual class label
-            aspect_label = np.argmax(aspect_label)
+            aspect_label = int(np.argmax(aspect_label))
 
             sentiment_predictions.append(float(sentiment_pred))
             sentiment_labels.append(float(sentiment_label))
