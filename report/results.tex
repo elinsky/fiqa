@@ -1,0 +1,21 @@
+Results are presented in \ref{results-table}.
+
+\begin{table*}
+    \small
+    \caption{Test Error Rates and F1 Scores for Classification, test MSE and R2 for Regression}
+    \label{results-table}
+    \centering
+    \begin{tabular}{lllll}
+        \multicolumn{1}{c}{} & \multicolumn{2}{c}{Aspect 2} & \multicolumn{2}{c}{Sentiment}\\
+        \hline
+        Model                   & Accuracy         & Macro F1         & MSE              & $R^2$ \\
+        \midrule
+        Regression Baseline     & $0.370$          & $0.218$          & $0.217$          & $-0.172$          \\
+        Neural Baseline         & $\mathbf{0.520}$ & $\mathbf{0.301}$ & $\mathbf{0.120}$ & $\mathbf{0.350}$  \\
+        Model 3                 & $0.0$            & $0.0$            & $0.0$            & $0.0$             \\
+        Model 4                 & $0.0$            & $0.0$            & $0.0$            & $0.0$             \\
+        \bottomrule
+    \end{tabular}
+\end{table*}
+% Regression baseline - 35 epochs. learning rate 1e-3. vocab 500. Just hierarchical classifier and logistic regression.
+% Neural baseline - 20 epochs. learning rate 1e-4. Not much fancy.

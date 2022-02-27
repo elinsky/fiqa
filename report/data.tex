@@ -1,0 +1,19 @@
+\renewcommand{\arraystretch}{1.5}
+\begin{table*}
+    \small
+    \caption{Sample FIQA 2018 Data}
+    \label{sample-data}
+    \centering
+    \begin{tabular}{p{0.65\linewidth} | p{0.09\linewidth} | p{0.21\linewidth}}
+        \toprule
+        Sentence     & Sentiment Score     & Aspect \\
+        \midrule
+        GlaxoSmithKline set to complete \$20 billion Novartis asset swap next week                                                 & 0.189  & Corporate/M\&A           \\
+        UK's FTSE has worst day so far in 2015 as BG and Prudential fall                                                           & -0.651 & Market/Market            \\
+        \$GLD http://stks.co/jr8 Daily chart - though RSI and Stoch. point at a possible move up, there's a lot of resistance.     & 0.176  & Stock/Technical Analysis \\
+        \$HSC Receives 7-Year, \$50M Contract at New Saudi Arabian Steel Mill"                                                     & 0.497  & Corporate/Sales          \\
+        \bottomrule
+    \end{tabular}
+\end{table*}
+
+The Financial Opinion Mining and Question Answering (FIQA) 2018 dataset \citep{10.1145/3184558.3192301} comprises 436 news headlines and 675 micro-blog messages from the financial domain. They label each sample with a sentiment score between -1 (negative) and 1 (positive) and an aspect label. An ontology tree organizes the aspect labels, creating 27 classifications. The headlines are short; the longest is 116 characters, and the shortest is 29 characters. The micro-blog posts are longer than the headlines, with the longest at 140 characters. See table \ref{sample-data} for sample sentences.

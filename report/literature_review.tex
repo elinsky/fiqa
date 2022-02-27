@@ -1,0 +1,73 @@
+We separate our related work into two areas: first, recent advancements in neural language processing. Second, deep learning methods applied to aspect-based sentiment analysis.
+
+\subsection{Recent Advances in Natural Language Processing}
+
+
+
+%During the last decade...
+
+Our work broadly falls under the category of semi-supervised sequence learning for natural language. There are four recent trends to pay attention to: deep contextual embeddings, pre-trained language models, a reduction in task-specific architectures, and task- and domain-specific fine-tuning.
+
+Because of their ability to transform words from a discrete representation to a continuous one, Word2vec \citep{mikolov2013efficient} was a standard component in many NLP systems. However, their context-independent nature limited their usefulness. For example, an embedding for the word ‘play’ is identical when used to describe a sporting event as for actors putting on a dramatic work.
+% Maybe also add a comment on how the method is linear (shallow), not deep.
+
+One of the first methods to encode context in words was proposed by \cite{dai2015semisupervised}. Using unlabeled data, they pre-trained a conventional language model using a next-word prediction objective. After fine-tuning the model on multiple sentiment classification tasks, they achieved best in class results. The method had limitations, though. By using a long short-term memory (LSTM) architecture, gradients became unstable for long documents.
+
+\cite{peters2018deep} built upon this approach. Using a similar pre-training objective, they pre-train a large language model on a dataset of 30 million sentences. However, they did not fine-tune the language mode. Instead they used the resulting model as a feature-extractor for task-specific architectures. After pre-training, they feed sentences into the language model. The output is a deep-contextual character embedding. They now discard the language model. Next, the character-level features are passed into a task-specific architecture. This design allowed them to achieve state-of-the-art results on an array of natural language tasks (SQuAD, SNLI, SRL, Coref, NER, SST-5) by solely swapping out Word2vec embeddings for ELMo embeddings.
+
+It wasn’t until GPT-1 where task-specific architectures begin to be discarded. Using a transformer architecture, \cite{radford2018improving} pre-trained a language model. Their use of transformers allowed the model to learn longer range dependencies in the text. They then use the entire pre-trained model as a base for supervised models. They showed that a pre-trained model, with little adaptation, can transfer learned representations to a multitude of NLP tasks. GPT-1 improved state-of-the art across 9 of 12 NLP benchmarks. These tasks covered 4 broad categories: natural language inference, question answering, semantic similarity, and text classification. However, the language model struggled on tasks such as part-of-speech tagging. This is because of the left-to-right masking and next-word-prediction pre-training objective. It did solidify the approach of using task-agnostic architecture in contrast to ELMo’s feature extraction method.
+
+\cite{DBLP:journals/corr/abs-1810-04805} addresses GPT-1’s left-to-right limitation by introducing a new pre-training objective. Instead of predicting the next word, they train their BERT model on with a Masked Language Modeling (MLM) objective. This allows the language model to benefit from both left-context, right-context, or a combination of both. They also train the model on the largest dataset to date. By combining bidirectional pre-training and an internet-scale dataset, they achieved state-of-the-art on 11 NLP tasks. This was the strongest demonstration to date that language models are compute-bound. BERT combines the best of previous approaches: a large pre-trained language model that learned deep contextual embeddings, and fine-tuning a general purpose model.
+
+
+
+
+
+
+
+
+
+
+
+%In one of the early methods to...
+
+%One of the early papers to leverage semi-supervised sequence learning
+
+%Big trends
+%- Deep contextual embeddings
+%- Pre-trained language models
+%- Reduction in task-specific architectures
+%- Task and domain specific fine-tuning.
+
+
+
+
+%Over the last few years, researchers have ...(demonstrated?)
+
+%Recent approaches have investigated...
+
+\subsection{Deep Learning Approaches to Aspect-Based Sentiment Analysis}
+
+%... is a special case of ...
+
+%Early works ...
+
+%In recent work ...
+
+%Research into aspect based sentiment analysis .... following methodolgies (approaches).
+
+%The datasets typically used for Aspect-Based Sentiment Analysis are ...
+
+
+%TODO - make sure I have a book reference
+%TODO - make sure I have an arxiv reference
+
+%(Early work) Early works on ABSA ....
+
+%(Recent DL improvements) Recent advances in deep contextual embeddings.
+
+%Trend towards pre-trained models. with fine-tuning.
+
+%Since the early works on ABSA [18], [19], [20], several methods have been put forward to address the problem. In this section, we review some of the works which have utilized deep learning techniques.
+
+%(How recent leverages) Recent methods leverage this approach.
