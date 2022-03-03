@@ -11,7 +11,7 @@ from dataloader.dataloader import DataLoader
 from dataloader.pipelines import AspectOneHotEncoder, DistilBertHeadlineTokenizer
 from executor.trainer import Trainer
 from utils.logger import get_logger
-from .base_model import BaseModel
+from .base_experiment import BaseExperiment
 # internal
 from .hierarchical_classifier import HierarchicalClassifier
 
@@ -56,7 +56,7 @@ class DistilBertModel(tf.keras.Model):
         return sentiment_logits, aspect_prob
 
 
-class DistilBert(BaseModel):
+class DistilBert(BaseExperiment):
 
     def __init__(self, config):
         super().__init__(config)

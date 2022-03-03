@@ -10,7 +10,7 @@ from dataloader.dataloader import DataLoader
 from dataloader.pipelines import AspectOneHotEncoder, HeadlineTFIDFTokenizer
 from executor.trainer import Trainer
 from utils.logger import get_logger
-from .base_model import BaseModel
+from .base_experiment import BaseExperiment
 # internal
 from .hierarchical_classifier import HierarchicalClassifier
 
@@ -30,7 +30,7 @@ class NaiveBaselineModel(tf.keras.Model):
         return sentiment_logits, aspect_prob
 
 
-class NaiveBaseline(BaseModel):
+class NaiveBaselineExperiment(BaseExperiment):
 
     def __init__(self, config):
         super().__init__(config)

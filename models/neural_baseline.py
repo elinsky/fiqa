@@ -12,7 +12,7 @@ from dataloader.pipelines import AspectOneHotEncoder, BertHeadlineTokenizer
 from executor.trainer import Trainer
 from utils.logger import get_logger
 # internal
-from .base_model import BaseModel
+from .base_experiment import BaseExperiment
 from .hierarchical_classifier import HierarchicalClassifier
 
 LOG = get_logger('Neural Baseline')
@@ -54,7 +54,7 @@ class NeuralBaselineModel(tf.keras.Model):
         return sentiment_logits, aspect_prob
 
 
-class NeuralBaseline(BaseModel):
+class NeuralBaselineExperiment(BaseExperiment):
 
     def __init__(self, config):
         super().__init__(config)
