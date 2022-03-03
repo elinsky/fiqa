@@ -3,3 +3,57 @@ Here are my initial methods.
 \includestandalone[width=.5\textwidth]{model_diagram}
 
 Here are some more methods.
+
+
+% Goal 250-400 words.
+
+\subsection{Naive Baseline}
+
+In our most naive model we...
+We process the financial headlines into TF-IDF vectors.
+Given the multi-level nature of the aspects, we design a hierarchical logistic regression model.
+We use a local classifer per parent node approach described by \cite{Silla:2011tp}.
+For the sentiment task, we fit a linear regression model on the TF-IDF vectors.
+
+
+\subsection{Pre-Trained BERT}
+
+We begin with a pre-trained BERT\textsubscript{BASE} base model with 12 transformer layers.
+This is the BERT\textsubscript{BASE} model described in \cite{DBLP:journals/corr/abs-1810-04805}.
+We take the outputs of the last hidden state, discarding the pooling layer outputs.
+We place a single dropout layer and dense layer on top of the BERT model.
+We then place a sentiment regression head and a aspect classification head on top.
+The sentiment regression is a simple linear regression.
+The aspect classification uses the hierarchical logistic regression model.
+We fit the model using an Adam optimizer.
+We train both heads together.
+For the loss function, we use categorical cross entropy loss for the aspects, and mean squared error for the sentiments.
+The total loss sum of the two losses.
+
+\subsection{Domain-Adapted BERT}
+
+% Dataset
+
+We begin with a dataset of publicly available financial news articles prepared by \cite{ding2014using}.
+The dataset includes 109,110 news articles from Reuters, and 450,341 from Bloomberg.
+The headlines span October 2006 to November 2013.
+
+% Tokenizer
+
+We train a tokenizer on this dataset.
+We normalize the text by converting to lowercase, removing control characters, and applying normalization Form D (NFD) Unnicode normalization.
+We pre-tokenize on whitespace and punctuation.
+Using a vocab size of 25,000, we train the tokenizer using the WordPiece subword segmentation algorithm \cite{DBLP:journals/corr/WuSCLNMKCGMKSJL16}.
+
+% Fine-Tuned
+
+Using our tokenizer, we split the financial news article dataset into documents of 256 tokens long.
+Begin with a pre-trained DistilBERT model \citep{DBLP:journals/corr/abs-1910-01108} with 6 transformer layers, half as many as BERT\textsubscript{BASE}.
+We fine-tune our pre-trained BERT model on the tokenized Reuters dataset using a masked-language modeling (MLM) objective.
+We train for 6 epochs.
+
+
+% Model
+
+Following a similar architecture to our pre-trained BERT model, we place a dropout and dense layer on top of the domain-adapted DistilBERT model.
+Then we place the same two aspect classification and sentiment regression heads on top.
