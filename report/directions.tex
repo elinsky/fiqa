@@ -1,2 +1,16 @@
-% Would like to augment the dataset.
-% Would like to try more fine-tuning schemes.
+We separate future work into two different categories: data augmentation and fine-tuning.
+
+
+
+Given the small size of the dataset, we would like to experiment with more data augmentation methodologies.
+In particular, \cite{feng-etal-2021-survey} describes promising rules-based and model-based techniques.
+We’d also like to experiment with more novel methods.
+We’d like to generate headline embeddings from the labeled FIQA dataset and use them to fit a k-nearest neighbors aspect model on the FIQA data.
+The model could label Reuters headlines in an unsupervised manner, substantially increasing the size of the labeled dataset.
+
+
+
+Recent advancements in language model fine-tuning also show promise for increasing performance on ABSA tasks.
+Our attempt to adapt the DistilBERT model to the financial domain did not yield better results.
+\cite{felbo2017} has shown that the ‘chain-thaw’ methodology, which sequentially unfreezes and fine-tunes a single layer at a time, can improve performance on an NLP target task.
+\cite{howard-ruder-2018-universal} also shows that discriminative fine-tuning and slanted triangular learning rates can reduce catastrophic forgetting and improve language model accuracy on small datasets.

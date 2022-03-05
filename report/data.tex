@@ -23,3 +23,7 @@ The headlines are short;
 the longest is 116 characters, and the shortest is 29 characters.
 The micro-blog posts are longer than the headlines, with the longest at 140 characters.
 See table~\ref{sample-data} for sample sentences.
+
+Given the FIQA organizers have not released the test dataset labels, we decide to hold-out 100 random labeled samples up front for final model evaluations.
+Since the dataset is already small, this will cause a negative performance impact and will make comparisons to other works more difficult.
+However, it will provide us with better estimates of the generalization error.

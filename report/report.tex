@@ -3,15 +3,16 @@
 \usepackage{natbib}
 \usepackage{times}
 \usepackage{latexsym}
+\usepackage{subcaption}
 \usepackage[margin=1in]{geometry}
 \usepackage{setspace} \doublespacing
 \usepackage{booktabs}                  % professional-quality tables
 \usepackage{hyperref}                  % Creates clickable links
 \hypersetup{pageanchor=false}          % Get rid of warning: pdfTeX warning (ext4): destination with the same identifier (name{page.1}) has been already used, duplicate ignored
-\usepackage[mode=buildnew]{standalone}% requires -shell-escape
+\usepackage[mode=buildnew]{standalone} % requires -shell-escape
 \usepackage{tikz}
 \usepackage{xcolor}
-%\usepackage{acl}
+
 % Page numbers in top right
 \usepackage{fancyhdr}
 \pagestyle{fancy}
@@ -37,15 +38,7 @@
 % bibliography
 \bibliographystyle{chicago}
 
-\title{Semi-Supervised BERT-Based Aspect-Based Sentiment Analysis for Financial Headlines}
-
-% The \author macro works with any number of authors. There are two commands
-% used to separate the names and addresses of multiple authors: \And and \AND.
-%
-% Using \And between authors leaves it to LaTeX to determine where to break the
-% lines. Using \AND forces a line break at that point. So, if LaTeX puts 3 of 4
-% authors names on the first line, and the last on the second line, try using
-% \AND instead of \And before the third author name.
+\title{BERT-Based Aspect-Based Sentiment Analysis for Financial Headlines}
 
 \author{%
     Brian D.~Elinsky \\
@@ -59,42 +52,6 @@
 
     \maketitle
 
-% In case I need to manually create a title page
-
-% \begin{titlepage}
-%    \begin{center}
-%        \vspace*{1cm}
-
-%        \textbf{Thesis Title}
-
-%        \vspace{0.5cm}
-%         Thesis Subtitle
-
-%        \vspace{1.5cm}
-
-%        \textbf{Author Name}
-
-%        \vfill
-
-%        A thesis presented for the degree of\\
-%        Doctor of Philosophy
-
-%        \vspace{0.8cm}
-
-
-%   Brian D.~Elinsky \\
-%   linkedin.com/in/brianelinsky\\
-%   https://github.com/elinsky\\
-%   Chicago, IL \\
-%   \texttt{Brian@BrianElinsky.com}
-
-
-%    \end{center}
-% \end{titlepage}
-
-
-% I think I am OK with the abstract being on its own page
-% https://www.uwgb.edu/austina/courses/guide%20to%20writing/Manuscript%20Format.htm
     \begin{abstract}
         \input{abstract}
     \end{abstract}
@@ -136,7 +93,5 @@
     \input{acknowledgements}
 
     \bibliography{fiqa_bib}
-
-%\section{Appendix}
 
 \end{document}

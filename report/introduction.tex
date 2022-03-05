@@ -1,15 +1,9 @@
-%% (Domain)
-
 Within the field of behavioral finance, there are two broad types of sentiment that are analyzed: investor sentiment and textual sentiment.
 Investor sentiment is a belief about future cash flows and investment risks that is not justified by the facts at hand~\citep{BakerMalcolm2007ISit}.
 As a survey-based approach, it attempts to capture the subjective judgements of individual investors.
 Textual sentiment refers to the degree of positivity or negativity in financial texts.
 This approach attempts to extract information about investors’ moods from corporate disclosures/filings, media articles, internet messages, and other corpora.
 Textual sentiment captures both subjective judgements and objective conditions in financial markets.
-
-%While textual sentiment can include aspects like active-passive and strong-weak, the majority of interest is in positivity-negativity.
-
-%%## Motivation
 
 While there are some areas of disagreement in the existing literature on the relationship between textual sentiment and financial markets, the existing literature largely agrees that textual sentiment has potentially strong impacts on stock returns, trading volumes, volatility, and abnormal returns~\citep{KearneyColm2014Tsif}.
 Negative sentiment exerts downward pressure on market prices, increased trading volume, and weakly predicts market volatility~\citep{TetlockPaul2007GCtI}.
@@ -22,27 +16,6 @@ And when sentiment and market returns point in the same direction, the market is
 While financial markets are quick to price in inefficiencies, improved measures of textual sentiment hold the promise of providing outsized returns to early movers.
 If we can better measure and model textual sentiment, we will have an advantage over other market participants.
 
-%While negative media coverage has a larger effect than positive, during corporate aquisitions, positive media coverage is predictive of acquisition success. % Buehlmaier (2013)
-
-%News stories about earnings have information, hard to process, long term fundamentals \citep{Engelberg2008CostlyIP}% Engelberg (2008)
-
-% Tetlock et al. (2008)
-% Sinha (2010)
-% Carretta et al. (2011)
-% Engelberg et al. (2012)
-% Ferguson et al. (2012)
-% Liu and McConnell (2013)
-
-%Portfolio of negative sentiment stocks that have performed poorly outperform high-flyers with positive sentiment \cite{froot2017media}. Buy losers with low sentiment. Market overreact when sentiment and price action moving together.% DEF INCLUDE BC NEW Media reinforcement in international financial markets Kenneth Froot (2017)
-
-% NEW Are financial constraints priced? Evidence from textual analysis (2018)
-%constraint - trouble issuing debt or equity. smaller companies.
-%\cite{BuehlmaierMatthiasMM2018AFCP}
-
-%Textual sentiment in media articles conveys additional information not captured by traditional quantitative financial information such as financial statements.
-
-%% Problem Statement
-
 Sentiment analysis is a sub-field of natural language processing (NLP).
 It aims to measure sentiment in text, audio, and other media. Aspect-Based Sentiment Analysis (ABSA) is a branch of sentiment analysis which deals with both extracting the opinion targets (aspects) and the sentiment expressed towards them.
 Given a collection of documents, the first subtask of ABSA is to identify all aspects present in the document.
@@ -52,28 +25,7 @@ The task is to identify the sentiment expressed towards the aspect.
 In the example above, annotators labeled the headline as having slightly positive sentiment (0.214) because the deal was successful and came together quickly.
 Thus, ABSA can be formulated as both a classification and regression task.
 
-%% Existing Methods Fall Short (I could actually cut this)
-
-%Traditional methods of measuring sentiment in the financial domain restrict
-%power of representations...
-
-%The major limitation of ...
-
-% Introduce FIQA
-
 In this article, we investigate different methods of measuring aspect-based sentiment within the financial domain.
 We begin with a pre-trained BERT language model.
 Then we fine-tune it on an unlabeled dataset of 559,451 financial headlines from Bloomberg and Reuters.
 We evaluate our approach on sub-task 1 of the FiQA 2018 challenge.
-Because of the small size of the FiQA dataset, we also experiment with a semi-automated approach to label data.
-
-%We investigate several methods of reading a financial headline, identifying aspects, and identifying the assocaited polarity.
-
-%We then show...
-% I really like the contributions section of the 'Financial Aspect-Based Sentiment Analysis using Deep Representations' paper. Really, I like almost all of that paper.
-
-The following are the primary contributions of this paper:
-
-1. We assess the performance of recent NLP techniques such as ...... on the FIQA dataset. (which has a limited number of training examples)
-
-% The rest of the paper is strucured as follows.
